@@ -1,15 +1,13 @@
 @import "../vendor/bootstrap/stylesheets/bootstrap";
 
-body {
-
-}
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
+  color: #FFF;
+  background: #201212;
 }
 
 
@@ -71,32 +69,21 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
+  margin-top: 40px;
   margin-bottom: 20px;
+}
+.marketing .col-lg-4 img {
   text-align: center;
+  margin: 0 auto;
+  display:block;
 }
 .marketing h2 {
   font-weight: normal;
 }
-.marketing .col-lg-4 p {
+.marketing .col-lg-4 p, .marketing .col-lg-4 h2 {
   margin-right: 10px;
   margin-left: 10px;
 }
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -126,14 +113,7 @@ body {
     font-size: 21px;
     line-height: 1.4;
   }
-
-  .featurette-heading {
-    font-size: 50px;
-  }
 }
 
 @media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
 }
