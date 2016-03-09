@@ -1,0 +1,20 @@
+{
+  "name": "teachest-wordpres-theme",
+  "description": "Tea Chest Wordpress Theme",
+  "version": "1.0.0-beta",
+  "homepage": "https://teachest.co",
+  "author": "Tea Chest",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.2",
+    "gulp-gzip": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
