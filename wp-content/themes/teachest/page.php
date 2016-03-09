@@ -8,18 +8,9 @@
  *
  * @package WordPress
  * @subpackage Tea Chest
- * @since Tea Chest 1.0
+ * @since Tea Chest 2.0
  */
 ?>
 <?php get_header();?>
-<?php while (have_posts()) : the_post(); ?>
-  <div class="row">
-	<div class="col-xs-12 col-lg-12">
-    <?php if (get_field('show_title', get_the_ID() )) { ?>
-		<h1><?php the_title(); ?></h1>
-    <?php } ?>
-		<?php the_content(); ?>
-	</div>
-  </div><!--/row-->
-<?php endwhile; ?>
+Page
 <?php get_footer();?>
