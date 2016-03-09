@@ -15,17 +15,10 @@
  */
 ?>
 <?php get_header();?>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Discover a world of teas from our hand picked TeaChests.</h1>
-          <p>Select a top level tea type and we will send you a hand curated TeaChest every delivery.</p>
-        </div>
-      </div>
-    </div>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Discover a world of teas from our hand picked TeaChests.</h1>
+    <p>Select a top level tea type and we will send you a hand curated TeaChest every delivery.</p>
   </div>
 </div>
 <div class="container marketing">
@@ -39,22 +32,88 @@
       </p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-4">
-      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+  <div class="row spacer">
+    <div class="col-md-4">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
       <h2>Heading</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
-    <div class="col-lg-4">
-      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+    <div class="col-md-4">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
       <h2>Heading</h2>
-      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-    </div>
-    <div class="col-lg-4">
-      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+   </div>
+    <div class="col-md-4">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
       <h2>Heading</h2>
       <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-lg-12 text-center">
+      <h2>And our experts will do the rest</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+        Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus. <br/>
+        Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+      </p>
+      <a href="#" class="btn btn-tc-default-inverse btn-xl text-uppercase spacer">Get started</a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid socialvalidation">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-4">
+        <p>
+          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+        </p>
+        <p>
+          <strong>@andygirvan</strong>
+        </p>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <p>
+          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+        </p>
+        <p>
+          <strong>@andygirvan</strong>
+        </p>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid tearange">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Our Tea Range</h2>
+        <p>
+          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+        </p>
+      </div>
+    </div>
+    <div class="row spacer">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8 teabox">
+        <h3>Tea Name</h3>
+        <h4>Origin</h4>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+    <div class="row spacer">
+      <div class="col-lg-12 text-center">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+          Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus. <br/>
+          Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+        </p>
+        <a href="#" class="btn btn-tc-default btn-xl text-uppercase spacer">Get started</a>
+      </div>
     </div>
   </div>
 </div>

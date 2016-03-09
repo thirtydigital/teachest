@@ -1,5 +1,25 @@
 @import "../vendor/bootstrap/stylesheets/bootstrap";
 
+.btn-tc-default {
+  @include button-variant(#201212, rgba(0,0,0,0), #201212);
+  border: 3px solid #201212;
+  text-transform: uppercase;
+
+  &.btn-xl {
+    @include button-size(20px, 36px, 24px, 24px, 0px);
+  }
+}
+
+.btn-tc-default-inverse {
+  @include button-variant(#FFF, rgba(0,0,0,0), #FFF);
+  border: 3px solid #FFF;
+  text-transform: uppercase;
+
+  &.btn-xl {
+    @include button-size(20px, 36px, 24px, 24px, 0px);
+  }
+}
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
@@ -9,80 +29,41 @@ body {
   color: #FFF;
   background: #201212;
 }
+.jumbotron {
+  padding-top: 300px;
+  padding-bottom: 270px;
+  background: #4c531d;
+}
+.teabox {
+  padding: 40px 20px 40px 20px;
+  background: white;
+}
+.navbar-inverse { background: none; border: 0px; color: #fff; }
 
-
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
-
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
+footer {
+  padding: 40px 0px 0px 0px;
 }
 
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
+.spacer {
+    margin-top: 40px; /* define margin as you see fit */
 }
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
+.marketing {
+  padding: 0px 0px 60px 0px;
 }
-.navbar-wrapper .navbar .container {
-  width: auto;
-}
-
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  height: 500px;
-  margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-.marketing .col-lg-4 img {
-  text-align: center;
+.marketing img {
+  display: block;
   margin: 0 auto;
-  display:block;
 }
-.marketing h2 {
-  font-weight: normal;
+.container-fluid.socialvalidation {
+  background: #dddddd;
+  color:#666666;
+  padding: 40px 0px 60px 0px;
 }
-.marketing .col-lg-4 p, .marketing .col-lg-4 h2 {
-  margin-right: 10px;
-  margin-left: 10px;
+
+.container-fluid.tearange {
+  background: #ededed;
+  color:#666666;
+  padding: 60px 0px 90px 0px;
 }
 
 /* RESPONSIVE CSS

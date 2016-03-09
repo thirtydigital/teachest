@@ -9,7 +9,10 @@
 ?>
   <div class="container">
     <footer>
-      <p class="pull-right">Follow us:</p>
+      <p class="pull-right">Follow us:
+        <a href="http://twitter.com/teachestuk" target="_blank"><i class="glyphicon glyphicon-user"></i></a>
+        <a href="http://instagram.com/teachestuk" target="_blank"><i class="glyphicon glyphicon-user"></i></a>
+      </p>
       <p>&copy; TeaChest <?php echo date("Y"); ?></p>
     </footer>
   </div>
