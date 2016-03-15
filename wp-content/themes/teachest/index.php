@@ -17,18 +17,18 @@
 <?php get_header();?>
 <div class="jumbotron">
   <div class="container text-center">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
       <h1 class="display-3">Discover a world of teas from our hand picked TeaChests.</h1>
       <p>Select a top level tea type and we will send you a hand curated TeaChest every delivery. </p>
       <a href="#how-it-works" class="btn-scrolldown"><i class="fa fa-chevron-down"></i></a>
     </div>
-    <div class="col-lg-1"></div>
+    <div class="col-sm-1"></div>
   </div>
 </div>
 <div class="container marketing">
   <div class="row">
-    <div class="col-lg-12 text-center">
+    <div class="col-sm-12 text-center">
       <h2 class="text-uppercase" id="how-it-works">How it works</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -38,26 +38,26 @@
     </div>
   </div>
   <div class="row spacer">
-    <div class="col-md-4 marketing-panel">
+    <div class="col-sm-4 marketing-panel">
       <!-- <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" /> -->
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf.png" class="img-responsive" style="margin-bottom:50px" />
-      <h2>Select a type of tea</h2>
+      <h2><span class="step-number">1</span> Select a type of tea</h2>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
-    <div class="col-md-4 marketing-panel">
+    <div class="col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2.png" class="img-responsive" />
-      <h2>Select quantity</h2>
+      <h2><span class="step-number">2</span> Select quantity</h2>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
    </div>
-    <div class="col-md-4 marketing-panel">
+    <div class="col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-delivery.png" class="img-responsive" />
-      <h2>Select frequency</h2>
+      <h2><span class="step-number">3</span> Select frequency</h2>
       <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     </div>
   </div>
   <div class="row spacer">
-    <div class="col-lg-12 text-center">
-      <h2>And our TeaChest experts<br/>will do the rest</h2>
+    <div class="col-sm-12 text-center">
+      <h2>And our TeaChest experts will do the rest</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
@@ -71,54 +71,53 @@
 <div class="container-fluid socialvalidation">
   <div class="container">
     <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-4">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
         <p>
-          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+          Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.
         </p>
         <p>
           <strong>@andygirvan</strong>
         </p>
       </div>
-      <div class="col-lg-4 col-sm-12">
+      <div class="col-sm-4">
         <p>
-          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+          Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.
         </p>
         <p>
           <strong>@andygirvan</strong>
         </p>
       </div>
-      <div class="col-lg-2"></div>
+      <div class="col-sm-2"></div>
     </div>
   </div>
 </div>
 <div class="container-fluid tearange">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
+      <div class="col-sm-12 text-center">
         <h2 class="text-uppercase">Our Tea Range</h2>
         <p>
-          We explore the world for the finest teas from the most interesting locations; hand picking the best selection of teas for you to enjoy in<br /> the comfort of your own home.
+          We explore the world for the finest teas from the most interesting locations; hand picking the best selection of teas for you to enjoy in the comfort of your own home.
         </p>
       </div>
     </div>
     <div class="row spacer">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8 no-padding teabox">
-        <div class="col-lg-4 no-padding">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8 no-padding teabox">
+        <div class="col-sm-4 no-padding">
           <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
         </div>
-        <div class="col-lg-8 teabox-info">
+        <div class="col-sm-8 teabox-info">
           <h3>Zhejiang Cloud</h3>
           <h4 class="text-uppercase">China</h4>
-          <br />
           <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
         </div>
       </div>
-      <div class="col-lg-2"></div>
+      <div class="col-sm-2"></div>
     </div>
     <div class="row spacer">
-      <div class="col-lg-12 text-center">
+      <div class="col-sm-12 text-center">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar fringilla.
         </p>

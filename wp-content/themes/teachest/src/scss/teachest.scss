@@ -52,10 +52,12 @@ body {
   h1 {
     font-family: 'brandon_grotesque_regularRg', Arial;
     font-size: 4.25rem;
+    line-height: 4.625rem;
     margin-bottom: 2.875rem;
   }
   p {
     font-size: 1.5rem;
+    line-height: 1.875rem;
   }
   a.btn-scrolldown {
     position: absolute;
@@ -65,7 +67,7 @@ body {
     margin: 0 auto;
     color:#fff;
     font-size: 4rem;
-    margin-left: -22px;
+    margin-left: -2rem;
   }
 }
 @media (max-width: $screen-sm-min) {
@@ -122,6 +124,7 @@ footer {
 
   p {
     font-size: 1.5rem;
+    line-height: 1.875rem;
     color:#666666;
   }
 
@@ -129,9 +132,24 @@ footer {
     margin-bottom: 1.25rem;
     h2 {
       font-size: 2rem;
+      position: relative;
+
+      .step-number {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        text-align: center;
+        left: -3.375rem;
+        top: -0.25rem;
+        line-height: 2.5rem;
+        border: 1px solid #fff;
+        border-radius: 5rem;
+      }
     }
     p {
       font-size: 1.125rem;
+      line-height: 1.5rem;
     }
   }
 }
@@ -152,6 +170,7 @@ footer {
   }
   p {
     font-size: 1.5rem;
+    line-height: 1.875rem;
     color:#666666;
   }
 
@@ -170,6 +189,7 @@ footer {
     }
     h4, p {
       font-size: 1.125rem;
+      line-height: 1.5rem;
     }
   }
 }
@@ -177,4 +197,9 @@ footer {
   background: #dddddd;
   color:#666666;
   padding: 2.5rem 0 3.75rem 0;
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
 }
