@@ -67,11 +67,12 @@ header {
           -ms-transition: all 0.1s ease;
 
 
-          &.active, &.focus, &:hover {
+          &.active, &:focus, &:hover {
             text-decoration: none;
             color:$color_default_dark;
             font-size: 3.125rem;
             line-height: 3.375rem;
+            outline:none;
           }
         }
       }
