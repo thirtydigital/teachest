@@ -1,0 +1,62 @@
+html {font-size: $base_desktop_fontsize;}
+@media (max-width: $screen-lg-min) {html{font-size: $base_phablet_fontsize;}}
+@media (max-width: $screen-md-min) {html{font-size: $base_tablet_fontsize;}}
+@media (max-width: $screen-sm-min) {html{font-size: $base_mobile_fontsize;}}
+
+body {
+  min-width: 320px!important;
+  padding-bottom: 2.5rem;
+  color: $color_default;
+  background: $color_bg;
+  font-family: $font_default;
+}
+
+header {
+  nav {
+    background: none;
+    border: 0;
+    color: $color_default;
+
+    .navbar-header {
+      display:block;
+      width: 100%;
+      margin-left:0!important;
+      margin-right:0!important;
+      margin-top: 1.125rem;
+
+      a.navbar-brand {
+        text-indent: -9999px;
+        background: transparent url('../img/logo.png') no-repeat;
+        display: block;
+        width:194px;
+        height: 27px;
+      }
+      a.navbar-menu {
+        color: $color_default;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 2.5rem 0 0 0;
+
+  p {
+    font-size: 0.875rem;
+    span {
+      position: relative;
+      top: -6px;
+      display: inline-block;
+      margin-right: 1.25rem;
+    }
+    a {
+      color: $color_default;
+      text-decoration: none;
+      margin-left: 1.25rem;
+
+      &:hover {
+        color: darken($color_default, 15%);
+      }
+    }
+  }
+}

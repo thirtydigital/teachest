@@ -38,21 +38,20 @@
     </div>
   </div>
   <div class="row spacer">
-    <div class="col-sm-4 marketing-panel">
-      <!-- <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" /> -->
+    <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf.png" class="img-responsive" style="margin-bottom:50px" />
       <h2><span class="step-number">1</span> Select a type of tea</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales pretium nibh, eu pharetra orci. Cras sit amet consectetur.</p>
     </div>
-    <div class="col-sm-4 marketing-panel">
+    <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2.png" class="img-responsive" />
       <h2><span class="step-number">2</span> Select quantity</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales pretium nibh, eu pharetra orci. Cras sit amet consectetur.</p>
    </div>
-    <div class="col-sm-4 marketing-panel">
+   <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-delivery.png" class="img-responsive" />
       <h2><span class="step-number">3</span> Select frequency</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales pretium nibh, eu pharetra orci. Cras sit amet consectetur.</p>
     </div>
   </div>
   <div class="row spacer">
@@ -103,7 +102,7 @@
       </div>
     </div>
     <div class="row spacer">
-      <div class="col-sm-2"></div>
+      <div class="col-sm-2 hidden-xs"></div>
       <div class="col-sm-8 no-padding teabox">
         <div class="col-sm-4 no-padding">
           <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
@@ -114,7 +113,7 @@
           <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
         </div>
       </div>
-      <div class="col-sm-2"></div>
+      <div class="col-sm-2 hidden-xs"></div>
     </div>
     <div class="row spacer">
       <div class="col-sm-12 text-center">

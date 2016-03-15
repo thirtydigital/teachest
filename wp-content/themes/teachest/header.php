@@ -28,11 +28,18 @@
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/"><?php bloginfo('name'); ?></a>
+    <header>
+      <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="pull-left">
+              <a class="navbar-brand" href="/"><?php bloginfo('name'); ?></a>
+            </div>
+            <div class="pull-right">
+              <a class="navbar-menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>

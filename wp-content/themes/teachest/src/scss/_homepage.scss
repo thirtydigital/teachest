@@ -1,0 +1,150 @@
+body.home {
+  .jumbotron {
+    padding-top: 17.5rem;
+    padding-bottom: 16.88rem;
+    background: $color_bg url('../img/background.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    h1 {
+      font-family: $font_default;
+      font-size: 4.25rem;
+      line-height: 4.625rem;
+      margin-bottom: 2.875rem;
+
+      @media (max-width: $screen-sm-min) {
+        font-size: 3rem;
+        line-height: 3.75rem;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+    }
+    a.btn-scrolldown {
+      position: absolute;
+      bottom: -11.25rem;
+      left: 50%;
+      display: block;
+      margin: 0 auto;
+      color:$color_default;
+      font-size: 4rem;
+      margin-left: -2rem;
+    }
+  }
+  .marketing {
+    padding-bottom:3.75rem;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+      color:$color_default_dark;
+    }
+
+    .marketing-panel {
+      margin-bottom: 2.25rem;
+
+      @media (max-width: $screen-sm-min) {
+        padding-left: 3.75rem;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+
+        @media (max-width: $screen-sm-min) {
+          position: relative;
+          left: -2.25rem;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        position: relative;
+
+        .step-number {
+          display: block;
+          width: 2.5rem;
+          height: 2.5rem;
+          position: absolute;
+          text-align: center;
+          left: -3.375rem;
+          top: -0.25rem;
+          line-height: 2.5rem;
+          border: 1px solid $color_default;
+          border-radius: 5rem;
+        }
+      }
+      p {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+
+        @media (max-width: $screen-sm-min) {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+        }
+      }
+    }
+  }
+  .socialvalidation {
+    background: $color_default_medium;
+    color:$color_default_dark;
+    padding: 2.5rem 0 3.75rem 0;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+    }
+  }
+  .tearange {
+    padding-top: 4.375rem;
+    background: $color_default_light url('../img/tea-background.png') no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;
+    color:$color_default_dark;
+
+    h2 {
+      font-size: 2.875rem;
+      color:$color_default_dark;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+      color:$color_default_dark;
+    }
+    .teabox {
+      margin-bottom: 6.25rem;
+      padding: 2.5rem 1.25rem 2.5rem 1.25rem;
+      background: white;
+
+      img {
+        max-width: 100%;
+        margin: 0 auto;
+        display:block;
+
+        @media (max-width: $screen-sm-min) {
+          padding-top:7px;
+        }
+      }
+
+      .teabox-info {
+        padding: 1.25rem ;
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin-top: 0;
+      }
+      h4, p {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+
+        @media (max-width: $screen-sm-min) {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+        }
+      }
+    }
+  }
+}
