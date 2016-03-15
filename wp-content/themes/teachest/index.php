@@ -21,6 +21,7 @@
     <div class="col-lg-10">
       <h1 class="display-3">Discover a world of teas from our hand picked TeaChests.</h1>
       <p>Select a top level tea type and we will send you a hand curated TeaChest every delivery. </p>
+      <a href="#how-it-works" class="btn-scrolldown"><i class="fa fa-chevron-down"></i></a>
     </div>
     <div class="col-lg-1"></div>
   </div>
@@ -28,7 +29,7 @@
 <div class="container marketing">
   <div class="row">
     <div class="col-lg-12 text-center">
-      <h2 class="text-uppercase">How it works</h2>
+      <h2 class="text-uppercase" id="how-it-works">How it works</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.

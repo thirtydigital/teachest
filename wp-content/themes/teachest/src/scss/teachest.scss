@@ -46,6 +46,7 @@ body {
   background: #4c531d url('../img/background.png') no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative;
 
   h1 {
     font-family: 'brandon_grotesque_regularRg', Arial;
@@ -54,6 +55,16 @@ body {
   }
   p {
     font-size: 1.5rem;
+  }
+  a.btn-scrolldown {
+    position: absolute;
+    bottom: -11.25rem;
+    left: 50%;
+    display: block;
+    margin: 0 auto;
+    color:#fff;
+    font-size: 4rem;
+    margin-left: -22px;
   }
 }
 @media (max-width: $screen-sm-min) {
