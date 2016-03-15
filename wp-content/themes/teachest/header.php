@@ -42,4 +42,37 @@
           </div>
         </div>
       </nav>
+      <nav class="fullscreen-nav">
+        <ul class="list-unstyled">
+          <li>
+            <a href="#">My account</a>
+          </li>
+          <li>
+            <a href="#">How it works</a>
+          </li>
+          <li>
+            <a href="#">Our range</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+
+        <div class="fullscreen-nav-footer">
+          <ul class="list-inline">
+            <li>
+              <a href="#">Terms &amp; Conditions</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Cookie Policy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>

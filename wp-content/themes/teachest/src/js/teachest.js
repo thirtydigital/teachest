@@ -13,4 +13,10 @@ $(document).ready(function() {
     scrollToId(anchorID)
     return false;
   });
+
+  $('.navbar-menu').on('click', function(e) {
+    $('.fullscreen-nav').toggle();
+    e.preventDefault();
+    return false;
+  });
 });
