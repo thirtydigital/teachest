@@ -23,67 +23,120 @@
     <div class="col-sm-1"></div>
   </div>
 </div>
-<div class="container-fluid subscribe-step">
+<div class="container-fluid subscribe-step subscribe-step-type">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2 class="text-uppercase" id="step-one">Choose A Tea Type</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
-          Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container-fluid subscribe-step alt">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h2 class="text-uppercase" id="step-two">Choose Quantity and Frequency</h2>
-        <p>
+        <h2 class="text-uppercase" id="step-one"><span class="step-number">1</span> Choose A Tea Type</h2>
+        <p class="width-thin">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
           Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
         </p>
       </div>
       <div class="hidden-xs col-sm-1"></div>
-      <div class="col-sm-2 spacer">
+      <div class="col-sm-2 spacer selected">
         <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm">Black</div>
-        <button class="btn btn-tc-default btn-sm btn-block btn-selected spacer-sm">Selected</button>
+        <div class="spacer-sm"><p>Black</p></div>
+        <button class="btn btn-tc-default btn-sm btn-block selected spacer-sm">Selected</button>
       </div>
       <div class="col-sm-2 spacer">
         <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm">Green</div>
+        <div class="spacer-sm"><p>Green</p></div>
         <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
       </div>
       <div class="col-sm-2 spacer">
         <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm">Herbal</div>
+        <div class="spacer-sm"><p>Herbal</p></div>
         <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
       </div>
       <div class="col-sm-2 spacer">
         <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm">Black Blended</div>
+        <div class="spacer-sm"><p>Black Blended</p></div>
         <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
       </div>
       <div class="col-sm-2 spacer">
         <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm">Variety Chest</div>
+        <div class="spacer-sm"><p>Variety Chest</p></div>
         <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
       </div>
       <div class="hidden-xs col-sm-1"></div>
     </div>
   </div>
 </div>
-<div class="container-fluid subscribe-step">
+<div class="container-fluid subscribe-step alt subscribe-step-quantity">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2 class="text-uppercase" id="step-three">Sign Up</h2>
-        <p>
+        <h2 class="text-uppercase width-thin" id="step-two"><span class="step-number">2</span> Choose Quantity and Frequency</h2>
+        <p class="width-thin spacer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
+          Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+        </p>
+      </div>
+      <div class="hidden-xs col-sm-3"></div>
+      <div class="col-sm-2 spacer">
+        <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2-inverse.png" class="img-responsive" />
+      </div>
+      <div class="col-sm-2 spacer selected">
+        <span class="price">&pound;5.00</span>
+        <div class="spacer-sm"><p>for 10 tea bags</p></div>
+        <button class="btn btn-tc-default btn-sm btn-block spacer-sm selected">Selected</button>
+      </div>
+      <div class="col-sm-2 spacer">
+        <span class="price">&pound;7.25</span>
+        <div class="spacer-sm"><p>for 15 tea bags</p></div>
+        <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
+      </div>
+      <div class="hidden-xs col-sm-3"></div>
+    </div>
+    <div class="row">
+      <div class="hidden-xs col-sm-2"></div>
+      <div class="col-sm-8">
+        <hr class="dark" />
+      </div>
+      <div class="hidden-xs col-sm-2"></div>
+    </div>
+    <div class="row">
+      <div class="hidden-xs col-sm-3"></div>
+      <div class="col-sm-2">
+        <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-delivery-inverse.png" class="img-responsive" />
+      </div>
+      <div class="col-sm-2">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+            Weekly
+          </label>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1">
+            Fortnightly
+          </label>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1">
+            Four weekly
+          </label>
+        </div>
+      </div>
+      <div class="hidden-xs col-sm-3"></div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid subscribe-step subscribe-step-signup">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign Up</h2>
+        <p class="width-thin">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
           Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
@@ -93,7 +146,7 @@
     <div class="row">
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
-        <form class="form-horizontal spacer">
+        <form class="form-horizontal spacer" action="/payment/">
           <!-- <div class="row"> -->
             <div class="form-group">
               <label class="col-sm-4 control-label text-uppercase">First Name<sup>*</sup></label>

@@ -5,8 +5,23 @@ body.page-id-6 {
     padding: 2.5rem 0 3.75rem 0;
 
     h2 {
-      color:$color_bg;
+      color:$color_dark;
       font-size: 2.875rem;
+      padding-top: 5rem;
+
+      .step-number {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        text-align: center;
+        line-height: 3rem;
+        border: 2px solid $color_dark;
+        border-radius: 5rem;
+        left: 50%;
+        top: 0.8rem;
+        margin-left: -1.5rem;
+      }
     }
     p {
       font-size: 1.5rem;
@@ -15,6 +30,51 @@ body.page-id-6 {
     &.alt {
       background: $color_default_medium;
       color: $color_default_dark;
+    }
+
+    &.subscribe-step-type {
+      background: $color_default_light url(../img/leaf-background.png) no-repeat top right;
+      p {
+        font-size: 1.5rem;
+      }
+      div.spacer-sm p {
+        font-size: 1.2rem;
+      }
+      .selected {
+        img {
+          border: 8px solid #b4b3b3;
+        }
+      }
+    }
+    &.subscribe-step-quantity {
+      span.price {
+        font-size: 3.375rem;
+        line-height: 3.375rem;
+        color:#999999;
+      }
+      div.spacer-sm p {
+        font-size: 1.2rem;
+      }
+      .selected {
+        img {
+          border: 8px solid #b4b3b3;
+        }
+        span.price {
+          color:$color_dark;
+        }
+      }
+      label {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        color:$color_dark;
+      }
+      div.radio input {
+        position: relative;
+        top: -2px;
+      }
+    }
+    &.subscribe-step-signup {
+      background: $color_default_light url(../img/leaf-background-2.png) no-repeat bottom left;
     }
   }
 }

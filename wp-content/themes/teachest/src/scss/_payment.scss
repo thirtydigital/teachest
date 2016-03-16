@@ -1,0 +1,31 @@
+body.page-id-8 {
+  .payment-step {
+    background: $color_default_light;
+    color: $color_default_dark;
+    padding: 2.5rem 0 3.75rem 0;
+
+    h2 {
+      color:$color_dark;
+      font-size: 2.875rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+
+    &.alt {
+      background: $color_default_medium;
+      color: $color_default_dark;
+    }
+    .select-wrapper {
+      &:after {
+        font-family: FontAwesome;
+         content: "\f0d7";
+         position: absolute;
+         display: block;
+         right: 1.875rem;
+         font-size: 1.5rem;
+         top: 0.375rem;
+      }
+    }
+  }
+}

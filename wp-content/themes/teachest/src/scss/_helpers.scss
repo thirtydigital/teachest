@@ -7,3 +7,16 @@
 .spacer-sm {
   margin-top: 0.5rem!important;
 }
+.width-thin {
+  width: 60%;
+  margin: 0 auto;
+
+  @media (max-width: $screen-sm-min) {
+    width: 100%;
+  }
+}
+hr.dark {
+  border-top:1px solid $color_default_dark;
+  margin-top:2.5rem;
+  margin-bottom:2.5rem;
+}

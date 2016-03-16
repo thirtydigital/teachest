@@ -20,7 +20,7 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <h1 class="display-3">Discover a world of teas from our hand picked TeaChests.</h1>
-      <p>Select a top level tea type and we will send you a hand curated TeaChest every delivery. </p>
+      <p class="width-thin">Select a top level tea type and we will send you a hand curated TeaChest every delivery. </p>
       <a href="#how-it-works" class="btn-scrolldown"><i class="fa fa-chevron-down"></i></a>
     </div>
     <div class="col-sm-1"></div>
@@ -30,7 +30,7 @@
   <div class="row">
     <div class="col-sm-12 text-center">
       <h2 class="text-uppercase" id="how-it-works">How it works</h2>
-      <p>
+      <p class="width-thin">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
         Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
@@ -56,13 +56,13 @@
   </div>
   <div class="row spacer">
     <div class="col-sm-12 text-center">
-      <h2>And our TeaChest experts will do the rest</h2>
-      <p>
+      <h2 class="width-thin">And our TeaChest experts will do the rest</h2>
+      <p class="width-thin">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
         Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
       </p>
-      <a href="#" class="btn btn-tc-default-inverse btn-xl text-uppercase spacer">Get started</a>
+      <a href="/subscribe/" class="btn btn-tc-default-inverse btn-xl text-uppercase spacer">Get started</a>
     </div>
   </div>
 </div>
@@ -96,7 +96,7 @@
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase">Our Tea Range</h2>
-        <p>
+        <p class="width-thin">
           We explore the world for the finest teas from the most interesting locations; hand picking the best selection of teas for you to enjoy in the comfort of your own home.
         </p>
       </div>
@@ -125,10 +125,10 @@
     </div>
     <div class="row spacer">
       <div class="col-sm-12 text-center">
-        <p>
+        <p class="width-thin">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar fringilla.
         </p>
-        <a href="#" class="btn btn-tc-default btn-xl text-uppercase spacer">Get started</a>
+        <a href="/subscribe/" class="btn btn-tc-default btn-xl text-uppercase spacer">Get started</a>
       </div>
     </div>
     <div class="row spacer"></div>
