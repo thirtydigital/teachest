@@ -72,11 +72,28 @@ body.home {
   .socialvalidation {
     background: $color_default_medium;
     color:$color_default_dark;
-    padding: 2.5rem 0 3.75rem 0;
+    padding: 2.0rem 0 3.75rem 0;
+    position: relative;
 
     p {
       font-size: 1.5rem;
       line-height: 1.875rem;
+    }
+    .media-body {
+      h4 {
+        font-size: 1.125rem;
+        line-height: 1.35rem;
+        font-family: 'brandon_grotesquemedium', Arial;
+      }
+      p {
+        font-size: 1.125rem;
+        line-height: 1.35rem;
+      }
+    }
+    .fa-twitter {
+      position: absolute;
+      left: -3.75rem;
+      top: 0;
     }
   }
   .tearange {

@@ -71,21 +71,34 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2"></div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 spacer">
+        <i class="fa fa-twitter fa-3x"></i>
         <p>
           Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.
         </p>
-        <p>
-          <strong>@andygirvan</strong>
-        </p>
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" alt="45x45" src="//placehold.it/45x45">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">@username</h4>
+            <p>1 week ago</p>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 spacer">
         <p>
           Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.
         </p>
-        <p>
-          <strong>@andygirvan</strong>
-        </p>
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" alt="45x45" src="//placehold.it/45x45">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">@username</h4>
+            <p>1 week ago</p>
+          </div>
+        </div>
       </div>
       <div class="col-sm-2"></div>
     </div>
