@@ -19,8 +19,8 @@
   <div class="container text-center">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-      <h1 class="display-3">Discover a world of teas from our hand picked TeaChests.</h1>
-      <p class="width-thin">Select a top level tea type and we will send you a hand curated TeaChest every delivery. </p>
+      <h1 class="display-3">Discover a world of teas from our hand-picked TeaChests.</h1>
+      <p class="width-thin">Select a top-level tea type and we will send you an individual, expert-picked TeaChest every delivery. </p>
       <a href="#how-it-works" class="btn-scrolldown"><i class="fa fa-chevron-down"></i></a>
     </div>
     <div class="col-sm-1"></div>
@@ -31,38 +31,34 @@
     <div class="col-sm-12 text-center">
       <h2 class="text-uppercase" id="how-it-works">How it works</h2>
       <p class="width-thin">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
-        Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+        You select a type of tea, how many teabags you want and how often you want them delivered and we’ll send you a selection of the finest teas from all over the world.
       </p>
     </div>
   </div>
   <div class="row spacer">
     <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf.png" class="img-responsive" style="margin-bottom:50px" />
-      <h2><span class="step-number">1</span> Select a type of tea</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales pretium nibh, eu pharetra orci. Cras sit amet consectetur.</p>
+      <h2><span class="step-number">1</span> Select type of tea</h2>
+      <p>Choose from our range of green, black, herbal, black blended teas or our Expert TeaChest.</p>
     </div>
     <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2.png" class="img-responsive" />
       <h2><span class="step-number">2</span> Select quantity</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales pretium nibh, eu pharetra orci. Cras sit amet consectetur.</p>
+      <p>Choose from either 10 or 15  of the finest-quality teabags with each delivery.</p>
    </div>
    <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-delivery.png" class="img-responsive" />
       <h2><span class="step-number">3</span> Select frequency</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales pretium nibh, eu pharetra orci. Cras sit amet consectetur.</p>
+      <p>Have a TeaChest delivered every week, fortnightly or four weeks as per your preference.</p>
     </div>
   </div>
   <div class="row spacer">
     <div class="col-sm-12 text-center">
-      <h2 class="width-thin">And our TeaChest experts will do the rest</h2>
-      <p class="width-thin">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
-        Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+      <h2 class="width-thin">Our TeaChest experts will do the rest</h2>
+      <p class="width-thin spacer-sm">
+        We'll put together the best TeaChest possible for you from our vast range and create your own personal journey through the world of teas.
       </p>
-      <a href="/subscribe/" class="btn btn-tc-default-inverse btn-xl text-uppercase spacer">Get started</a>
+      <a href="/subscribe/" class="btn btn-tc-default-inverse btn-xl text-uppercase spacer">GET STARTED</a>
     </div>
   </div>
 </div>
@@ -110,7 +106,7 @@
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase">Our Tea Range</h2>
         <p class="width-thin">
-          We explore the world for the finest teas from the most interesting locations; hand picking the best selection of teas for you to enjoy in the comfort of your own home.
+          We’ve explored the world to find the finest teas from the most interesting locations, hand-picking the very best of them for you to enjoy from the comfort of your own home.
         </p>
       </div>
     </div>
@@ -128,7 +124,7 @@
           <div class="carousel-inner" role="listbox">
             <div class="item active">
               <div class="col-sm-5 no-padding">
-                <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
+                <img src="//placehold.it/325x325" class="img-responsive" />
               </div>
               <div class="col-sm-7 teabox-info">
                 <h3>First Tea</h3>
@@ -146,36 +142,36 @@
             </div>
             <div class="item">
               <div class="col-sm-5 no-padding">
-                <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
+                <img src="//placehold.it/325x325" class="img-responsive" />
               </div>
               <div class="col-sm-7 teabox-info">
                 <h3>Second Tea</h3>
-                <h4 class="text-uppercase">China</h4>
-                <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
+                <h4 class="text-uppercase">America</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar fringilla.</p>
                 <p>
                   <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
                 </p>
                 <p>
-                  Temp: 80<sup>&deg;</sup>C<br/>
-                  Steep: 2-3 mins
+                  Temp: 20<sup>&deg;</sup>C<br/>
+                  Steep: 10-30 mins
                 </br/>
                 </p>
               </div>
             </div>
             <div class="item">
               <div class="col-sm-5 no-padding">
-                <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
+                <img src="//placehold.it/325x325" class="img-responsive" />
               </div>
               <div class="col-sm-7 teabox-info">
-                <h3>First Tea</h3>
-                <h4 class="text-uppercase">China</h4>
-                <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
+                <h3>Third Tea</h3>
+                <h4 class="text-uppercase">India</h4>
+                <p>Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.</p>
                 <p>
                   <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
                 </p>
                 <p>
-                  Temp: 80<sup>&deg;</sup>C<br/>
-                  Steep: 2-3 mins
+                  Temp: 70<sup>&deg;</sup>C<br/>
+                  Steep: 1-4 mins
                 </br/>
                 </p>
               </div>
@@ -196,7 +192,7 @@
     <div class="row spacer">
       <div class="col-sm-12 text-center">
         <p class="width-thin">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar fringilla.
+          Begin your journey into the world of teas with TeaChest, where you’ll always get the best-quality teas delivered straight to your door.
         </p>
         <a href="/subscribe/" class="btn btn-tc-default btn-xl text-uppercase spacer">Get started</a>
       </div>

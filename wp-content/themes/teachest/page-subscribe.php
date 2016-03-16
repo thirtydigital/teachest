@@ -17,7 +17,13 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar, fringilla fermentum odio. Nulla sed arcu lectus.</p>
+      <p>You choose the frequency, amount and type of teas you receive in your TeaChest and our experts will do the rest to make sure you get the best of our products every time. </p>
+      <p>
+        Enter your personal details and payment information to complete your account and manage your TeaChest subscription along with your order details. You can also see a delivery estimate.
+      </p>
+      <p>
+        Complete your account and get started with your TeaChest journey. Whether you’re discovering delicious and exotic new teas or revisiting old favourites, a regular TeaChest delivery will make sure that you never run out.
+      </p>
     </div>
     <div class="col-sm-1"></div>
   </div>
@@ -26,11 +32,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2 class="text-uppercase" id="step-one"><span class="step-number">1</span> Choose A Tea Type</h2>
+        <h2 class="text-uppercase" id="step-one"><span class="step-number">1</span> Choose Tea Type</h2>
         <p class="width-thin">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
-          Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+          Have a favourite type of tea? Choose from our list below or go for the Expert Chest option for a mix of each. You can change this option at any time.
         </p>
       </div>
       <div class="hidden-xs col-sm-1"></div>
@@ -69,9 +73,7 @@
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase width-thin" id="step-two"><span class="step-number">2</span> Choose Quantity and Frequency</h2>
         <p class="width-thin spacer">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
-          Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+          Choose to receive either 10 or 15 teabags in your TeaChest and how often you wish to receive them. You may change these settings at any time from your account.
         </p>
       </div>
       <div class="hidden-xs col-sm-3"></div>
@@ -136,9 +138,7 @@
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign Up</h2>
         <p class="width-thin">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aliquam tortor leo, convallis nec est sit amet, ultrices vehicula risus.
-          Aliquam vestibulum aliquam ex, ac blandit ipsum mattis a.
+          Create an account from where you can manage your TeaChest subscription and payment methods.
         </p>
       </div>
     </div>

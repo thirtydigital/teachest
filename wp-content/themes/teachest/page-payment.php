@@ -17,7 +17,7 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar, fringilla fermentum odio. Nulla sed arcu lectus.</p>
+      <p>Enter your personal details and payment information to complete your account and manage your TeaChest subscription along with your order details. You can also see a delivery estimate.  </p>
     </div>
     <div class="col-sm-1"></div>
   </div>
@@ -27,6 +27,9 @@
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase">Billing Details</h2>
+        <p>
+          Complete your account and get started with your TeaChest journey. 
+        </p>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
