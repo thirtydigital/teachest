@@ -5,32 +5,14 @@ body.home {
     background: $color_bg url('../img/background.png') no-repeat;
     background-position: center center;
     background-size: cover;
-    position: relative;
+    margin-bottom: 1.875rem;
 
-    h1 {
-      font-family: $font_default;
-      font-size: 4.25rem;
-      line-height: 4.625rem;
-      margin-bottom: 2.875rem;
-
-      @media (max-width: $screen-sm-min) {
-        font-size: 3rem;
-        line-height: 3.75rem;
-      }
-    }
     p {
-      font-size: 1.5rem;
-      line-height: 1.875rem;
-    }
-    a.btn-scrolldown {
-      position: absolute;
-      bottom: -11.25rem;
-      left: 50%;
-      display: block;
-      margin: 0 auto;
       color:$color_default;
-      font-size: 4rem;
-      margin-left: -2rem;
+    }
+
+    a.btn-scrolldown {
+      bottom: -11.25rem;
     }
   }
   .marketing {

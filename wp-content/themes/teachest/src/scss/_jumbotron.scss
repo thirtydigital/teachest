@@ -1,0 +1,36 @@
+.jumbotron {
+  background: black;
+  padding-top: 8.125rem;
+  padding-bottom: 4.375rem;
+  position: relative;
+  margin-bottom: 0;
+
+  h1 {
+    font-family: $font_default;
+    font-size: 4.25rem;
+    line-height: 4.625rem;
+    margin-bottom: 2.875rem;
+
+    @media (max-width: $screen-sm-min) {
+      font-size: 3rem;
+      line-height: 3.75rem;
+    }
+  }
+
+  p {
+    color:$color_default_dark;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+
+  a.btn-scrolldown {
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    display: block;
+    margin: 0 auto;
+    color:$color_default;
+    font-size: 4rem;
+    margin-left: -2rem;
+  }
+}
