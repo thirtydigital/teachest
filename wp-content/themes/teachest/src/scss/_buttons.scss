@@ -1,5 +1,5 @@
 .btn-tc-default {
-  @include button-variant(#201212, rgba(0,0,0,0), #201212);
+  @include button-variant(#201212, #ededed, #201212);
   border: 0.1875rem solid #201212;
   text-transform: uppercase;
 

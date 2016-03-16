@@ -18,7 +18,6 @@
     <div class="col-sm-10">
       <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar, fringilla fermentum odio. Nulla sed arcu lectus.</p>
-      <!-- <a href="#how-it-works" class="btn-scrolldown"><i class="fa fa-chevron-down"></i></a> -->
     </div>
     <div class="col-sm-1"></div>
   </div>
