@@ -27,5 +27,23 @@ body.page-id-8 {
          top: 0.375rem;
       }
     }
+    .payment-your-order {
+      p {
+        font-size: 1.125rem;
+      }
+    }
+    .payment-submit, .payment-different-address {
+      label {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        color:$color_default_dark;
+
+        input {
+          position: relative;
+          top: -2px;
+          left: -10px;
+        }
+      }
+    }
   }
 }

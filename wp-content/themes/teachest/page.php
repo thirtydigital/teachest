@@ -12,5 +12,26 @@
  */
 ?>
 <?php get_header();?>
-Page
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<div class="jumbotron">
+  <div class="container text-center">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar, fringilla fermentum odio. Nulla sed arcu lectus.</p> -->
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+<div class="container-fluid generic-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <?php the_content(); ?>
+      </div>
+    </div>
+  </div>
+</div>
+<?php endwhile; else : ?>
+<?php endif; ?>
 <?php get_footer();?>

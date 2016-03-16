@@ -81,12 +81,6 @@
               <input type="email" class="form-control input-lg" id="" placeholder="">
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-sm-4 control-label text-uppercase">Password<sup>*</sup></label>
-            <div class="col-sm-8">
-              <input type="password" class="form-control input-lg" id="" placeholder="">
-            </div>
-          </div>
         </form>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
@@ -98,12 +92,19 @@
       </div>
       <div class="hidden-xs col-sm-2"></div>
     </div>
-    <div class="row">
+    <div class="row payment-different-address">
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase">Ship to a different address?</h2>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
-      <div class="col-md-6">
+      <div class="col-md-6 text-center">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Ship to a different address
+          </label>
+        </div>
+      </div>
+      <div class="col-md-6 hidden payment-different-address-panel">
         <form class="form-horizontal spacer">
           <div class="form-group">
             <label class="col-sm-4 control-label text-uppercase">First Name<sup>*</sup></label>
@@ -149,18 +150,6 @@
               <input type="text" class="form-control input-lg" id="" placeholder="">
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-sm-4 control-label text-uppercase">Email<sup>*</sup></label>
-            <div class="col-sm-8">
-              <input type="email" class="form-control input-lg" id="" placeholder="">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-4 control-label text-uppercase">Password<sup>*</sup></label>
-            <div class="col-sm-8">
-              <input type="password" class="form-control input-lg" id="" placeholder="">
-            </div>
-          </div>
         </form>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
@@ -172,13 +161,30 @@
       </div>
       <div class="hidden-xs col-sm-2"></div>
     </div>
-    <div class="row">
+    <div class="row payment-your-order">
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase">Your order</h2>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
-      <div class="col-md-6">
-
+      <div class="col-md-6 text-center">
+        <h3 class="spacer">Black Tea Subscription</h3>
+        <p class="spacer">
+          10 Teas Weekly<br />
+          &pound;5.00 / week<br />
+          You will receive your first Tea Chest on 11/02/2016
+        </p>
+        <div class="form-group spacer text-left">
+          <label class="col-sm-4 control-label text-uppercase">Order notes</label>
+          <div class="col-sm-8">
+            <textarea class="form-control input-lg" id="" placeholder=""></textarea><br />
+          </div>
+        </div>
+        <div class="form-group text-left">
+          <label class="col-sm-4 control-label text-uppercase">Promotion code</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control input-lg" id="" placeholder="">
+          </div>
+        </div>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
     </div>
@@ -206,9 +212,23 @@
       </div>
       <div class="hidden-xs col-sm-2"></div>
     </div>
-    <div class="row">
+    <div class="row payment-submit">
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
+        <div class="col-md-12">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> I’ve read and accept the <a href="/terms-and-conditions/" target="_blank">terms &amp; conditions</a>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> I agree to be contacted by TeaChest
+            </label>
+          </div>
+        </div>
         <div class="form-group">
           <div class="col-sm-12 text-center">
             <button type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer">Submit</button>

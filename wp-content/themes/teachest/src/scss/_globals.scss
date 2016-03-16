@@ -11,6 +11,17 @@ body {
   color: $color_default;
   background: $color_bg;
   font-family: $font_default;
+
+  p, label {
+    a {
+      color: $color_dark;
+      text-decoration: underline;
+
+      &:focus, &:hover {
+        color: $color_bg;
+      }
+    }
+  }
 }
 
 header {
@@ -122,5 +133,17 @@ footer {
         color: darken($color_default, 15%);
       }
     }
+  }
+}
+
+.container-fluid.generic-content {
+  background: $color_default_light;
+  color: $color_default_dark;
+  padding: 2.5rem 0 3.75rem 0;
+
+  li, p {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color:$color_default_dark;
   }
 }

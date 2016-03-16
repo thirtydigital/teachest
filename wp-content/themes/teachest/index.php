@@ -116,22 +116,79 @@
     </div>
     <div class="row spacer">
       <div class="col-sm-2 hidden-xs"></div>
-      <div class="col-sm-8 no-padding teabox">
-        <div class="col-sm-5 no-padding">
-          <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
-        </div>
-        <div class="col-sm-7 teabox-info">
-          <h3>Zhejiang Cloud</h3>
-          <h4 class="text-uppercase">China</h4>
-          <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
-          <p>
-            <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
-          </p>
-          <p>
-            Temp: 80<sup>&deg;</sup>C<br/>
-            Steep: 2-3 mins
-          </br/>
-          </p>
+      <div class="col-sm-8 teabox" data-ride="carousel">
+
+        <div class="no-padding carousel slide">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="col-sm-5 no-padding">
+                <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
+              </div>
+              <div class="col-sm-7 teabox-info">
+                <h3>First Tea</h3>
+                <h4 class="text-uppercase">China</h4>
+                <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
+                <p>
+                  <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
+                </p>
+                <p>
+                  Temp: 80<sup>&deg;</sup>C<br/>
+                  Steep: 2-3 mins
+                </br/>
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-sm-5 no-padding">
+                <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
+              </div>
+              <div class="col-sm-7 teabox-info">
+                <h3>Second Tea</h3>
+                <h4 class="text-uppercase">China</h4>
+                <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
+                <p>
+                  <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
+                </p>
+                <p>
+                  Temp: 80<sup>&deg;</sup>C<br/>
+                  Steep: 2-3 mins
+                </br/>
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-sm-5 no-padding">
+                <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/tea-example.png" class="img-responsive" />
+              </div>
+              <div class="col-sm-7 teabox-info">
+                <h3>First Tea</h3>
+                <h4 class="text-uppercase">China</h4>
+                <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
+                <p>
+                  <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
+                </p>
+                <p>
+                  Temp: 80<sup>&deg;</sup>C<br/>
+                  Steep: 2-3 mins
+                </br/>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a> -->
         </div>
       </div>
       <div class="col-sm-2 hidden-xs"></div>

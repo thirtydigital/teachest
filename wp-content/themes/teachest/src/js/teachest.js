@@ -16,7 +16,14 @@ $(document).ready(function() {
 
   $('.navbar-menu').on('click', function(e) {
     $('.fullscreen-nav').toggle();
+    $(this).find('i').toggleClass('fa-bars').toggleClass('fa-times');
     e.preventDefault();
     return false;
   });
+
+  $('.payment-different-address input').change(function() {
+    $(this).parent().parent().parent().remove();
+    $('.payment-different-address-panel').toggleClass('hidden');
+  });
+  // $('.carousel').carousel();
 });

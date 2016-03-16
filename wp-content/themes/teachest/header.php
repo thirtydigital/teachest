@@ -64,7 +64,7 @@
         <div class="fullscreen-nav-footer">
           <ul class="list-inline">
             <li>
-              <a href="#">Terms &amp; Conditions</a>
+              <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
             </li>
             <li>
               <a href="#">Privacy Policy</a>
