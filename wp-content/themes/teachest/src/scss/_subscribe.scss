@@ -34,6 +34,9 @@ body.page-id-6 {
 
     &.subscribe-step-type {
       background: $color_default_light url(../img/leaf-background.png) no-repeat top right;
+      @media (max-width: $screen-sm-min) {
+        background-position: 0% -20%;
+      }
       p {
         font-size: 1.5rem;
       }
@@ -118,6 +121,9 @@ body.page-id-6 {
     }
     &.subscribe-step-signup {
       background: $color_default_light url(../img/leaf-background-2.png) no-repeat bottom left;
+      @media (max-width: $screen-sm-min) {
+        background-position: 30% 210%;
+      }
     }
   }
 }
