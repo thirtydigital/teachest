@@ -36,75 +36,28 @@
         <p class="width-thin">
           Have a favourite type of tea? Choose from our list below or go for the Expert Chest option for a mix of each. You can change this option at any time.
         </p>
-        <?php
-        $options = array(
-        	'debug'           => false,
-        	'return_as_array' => true,
-        	'validate_url'    => false,
-        	'timeout'         => 0,
-        	'ssl_verify'      => false,
-        );
-        try {
-          $client = new WC_API_Client( 'http://teachest.dev/', 'ck_c426ba676e32f9cd4a66f7b99a3c41bc6a6cd4f7', 'cs_d2d9719050ab8443a7a51d0dbe0ba9420d5aca72', $options );
-          $products = $client->products->get();
-        }
-        catch ( WC_API_Client_Exception $e ) {
-        	echo $e->getMessage() . PHP_EOL;
-        	echo $e->getCode() . PHP_EOL;
-        }
-        ?>
       </div>
       <div class="hidden-xs col-sm-1"></div>
-      <?php if ( $products ) { ?>
-        <?php foreach($products as $product) { $product = $product[0]; //var_dump($product); ?>
-        <div class="col-xs-12 col-sm-2 spacer">
+      <?php
+      $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 5
+      );
+      $loop = new WP_Query( $args );
+      ?>
+      <?php if ( $loop->have_posts() ) { ?>
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <div class="col-xs-12 col-sm-2 spacer col-product">
           <div class="col-xs-6 col-sm-12" style="padding:0">
-            <img src="<?php echo $product['featured_src']; ?>" class="img-responsive" />
+            <img src="//placehold.it/165x165" class="img-responsive" />
           </div>
           <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
-            <div class="spacer-sm"><p><?php echo $product['title']; ?></p></div>
+            <div class="spacer-sm"><p><?php the_title(); ?></p></div>
             <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
           </div>
         </div>
-        <?php } ?>
-      <?php } ?>
-
-      <div class="col-xs-12 col-sm-2 spacer">
-        <div class="col-xs-6 col-sm-12" style="padding:0">
-          <img src="//placehold.it/165x165" class="img-responsive" />
-        </div>
-        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
-          <div class="spacer-sm"><p>Green</p></div>
-          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-2 spacer">
-        <div class="col-xs-6 col-sm-12" style="padding:0">
-          <img src="//placehold.it/165x165" class="img-responsive" />
-        </div>
-        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
-          <div class="spacer-sm"><p>Herbal</p></div>
-          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-2 spacer">
-        <div class="col-xs-6 col-sm-12" style="padding:0">
-          <img src="//placehold.it/165x165" class="img-responsive" />
-        </div>
-        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
-          <div class="spacer-sm"><p>Black Blended</p></div>
-          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-2 spacer">
-        <div class="col-xs-6 col-sm-12" style="padding:0">
-          <img src="//placehold.it/165x165" class="img-responsive" />
-        </div>
-        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
-          <div class="spacer-sm"><p>Variety Chest</p></div>
-          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
-        </div>
-      </div>
+      <?php endwhile;  ?>
+      <?php } wp_reset_postdata(); ?>
       <div class="hidden-xs col-sm-1"></div>
     </div>
   </div>
@@ -123,13 +76,13 @@
         <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2-inverse.png" class="img-responsive" />
       </div>
       <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer selected">
-        <span class="price">&pound;5.00</span>
-        <div class="spacer-sm"><p>for 10 tea bags</p></div>
+        <span class="price">&pound;0.00</span>
+        <div class="spacer-sm"><p>for XX tea bags</p></div>
         <button class="btn btn-tc-default btn-block spacer-sm selected">Selected</button>
       </div>
       <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer">
-        <span class="price">&pound;7.25</span>
-        <div class="spacer-sm"><p>for 15 tea bags</p></div>
+        <span class="price">&pound;0.00</span>
+        <div class="spacer-sm"><p>for XX tea bags</p></div>
         <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
       </div>
       <div class="hidden-xs col-sm-3"></div>
@@ -150,7 +103,7 @@
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-            Weekly
+            Billing One
           </label>
         </div>
       </div>
@@ -158,7 +111,7 @@
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1">
-            Fortnightly
+            Billing Two
           </label>
         </div>
       </div>
@@ -166,7 +119,7 @@
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1">
-            Four weekly
+            Billing Three
           </label>
         </div>
       </div>
