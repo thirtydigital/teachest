@@ -43,36 +43,9 @@
         </div>
       </nav>
       <nav class="fullscreen-nav">
-        <ul class="list-unstyled">
-          <li>
-            <a href="#">My account</a>
-          </li>
-          <li>
-            <a href="#">How it works</a>
-          </li>
-          <li>
-            <a href="#">Our range</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-
+        <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false, 'menu_class' => 'list-unstyled') ); ?>
         <div class="fullscreen-nav-footer">
-          <ul class="list-inline">
-            <li>
-              <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
-            </li>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#">Cookie Policy</a>
-            </li>
-          </ul>
+          <?php wp_nav_menu( array( 'theme_location' => 'main-menu-footer', 'container' => false, 'menu_class' => 'list-inline') ); ?>
         </div>
       </nav>
     </header>
