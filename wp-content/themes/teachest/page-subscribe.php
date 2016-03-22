@@ -38,30 +38,50 @@
         </p>
       </div>
       <div class="hidden-xs col-sm-1"></div>
-      <div class="col-sm-2 spacer selected">
-        <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm"><p>Black</p></div>
-        <button class="btn btn-tc-default btn-sm btn-block selected spacer-sm">Selected</button>
+      <div class="col-xs-12 col-sm-2 spacer selected">
+        <div class="col-xs-6 col-sm-12" style="padding:0">
+          <img src="//placehold.it/165x165" class="img-responsive" />
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
+          <div class="spacer-sm"><p>Black</p></div>
+          <button class="btn btn-tc-default btn-block selected spacer-sm">Selected</button>
+        </div>
       </div>
-      <div class="col-sm-2 spacer">
-        <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm"><p>Green</p></div>
-        <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
+      <div class="col-xs-12 col-sm-2 spacer">
+        <div class="col-xs-6 col-sm-12" style="padding:0">
+          <img src="//placehold.it/165x165" class="img-responsive" />
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
+          <div class="spacer-sm"><p>Green</p></div>
+          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
+        </div>
       </div>
-      <div class="col-sm-2 spacer">
-        <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm"><p>Herbal</p></div>
-        <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
+      <div class="col-xs-12 col-sm-2 spacer">
+        <div class="col-xs-6 col-sm-12" style="padding:0">
+          <img src="//placehold.it/165x165" class="img-responsive" />
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
+          <div class="spacer-sm"><p>Herbal</p></div>
+          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
+        </div>
       </div>
-      <div class="col-sm-2 spacer">
-        <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm"><p>Black Blended</p></div>
-        <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
+      <div class="col-xs-12 col-sm-2 spacer">
+        <div class="col-xs-6 col-sm-12" style="padding:0">
+          <img src="//placehold.it/165x165" class="img-responsive" />
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
+          <div class="spacer-sm"><p>Black Blended</p></div>
+          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
+        </div>
       </div>
-      <div class="col-sm-2 spacer">
-        <img src="//placehold.it/165x165" class="img-responsive" />
-        <div class="spacer-sm"><p>Variety Chest</p></div>
-        <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
+      <div class="col-xs-12 col-sm-2 spacer">
+        <div class="col-xs-6 col-sm-12" style="padding:0">
+          <img src="//placehold.it/165x165" class="img-responsive" />
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
+          <div class="spacer-sm"><p>Variety Chest</p></div>
+          <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
+        </div>
       </div>
       <div class="hidden-xs col-sm-1"></div>
     </div>
@@ -77,18 +97,18 @@
         </p>
       </div>
       <div class="hidden-xs col-sm-3"></div>
-      <div class="col-sm-2 spacer">
+      <div class="col-xs-6 col-sm-2 spacer">
         <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2-inverse.png" class="img-responsive" />
       </div>
-      <div class="col-sm-2 spacer selected">
+      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer selected">
         <span class="price">&pound;5.00</span>
         <div class="spacer-sm"><p>for 10 tea bags</p></div>
-        <button class="btn btn-tc-default btn-sm btn-block spacer-sm selected">Selected</button>
+        <button class="btn btn-tc-default btn-block spacer-sm selected">Selected</button>
       </div>
-      <div class="col-sm-2 spacer">
+      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer">
         <span class="price">&pound;7.25</span>
         <div class="spacer-sm"><p>for 15 tea bags</p></div>
-        <button class="btn btn-tc-default btn-sm btn-block spacer-sm">Select</button>
+        <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
       </div>
       <div class="hidden-xs col-sm-3"></div>
     </div>
@@ -101,10 +121,10 @@
     </div>
     <div class="row">
       <div class="hidden-xs col-sm-3"></div>
-      <div class="col-sm-2">
+      <div class="col-xs-6 col-sm-2 spacer">
         <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-delivery-inverse.png" class="img-responsive" />
       </div>
-      <div class="col-sm-2">
+      <div class="col-xs-6 col-sm-2">
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
@@ -112,7 +132,7 @@
           </label>
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-xs-6 col-sm-2">
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1">
@@ -120,7 +140,7 @@
           </label>
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-xs-6 col-sm-2">
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1">
@@ -171,7 +191,7 @@
             </div>
           <!-- </div> -->
           <!-- <div class="row"> -->
-            <div class="form-group has-error">
+            <div class="form-group">
               <label class="col-sm-4 control-label text-uppercase">Choose Password<sup>*</sup></label>
               <div class="col-sm-8">
                 <input type="password" class="form-control input-lg" id="" placeholder="">

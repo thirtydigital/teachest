@@ -102,7 +102,7 @@
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6 text-center">
         <div class="checkbox">
-          <label>
+          <label class="larger">
             <input type="checkbox"> Ship to a different address
           </label>
         </div>

@@ -39,10 +39,33 @@ body.page-id-6 {
       }
       div.spacer-sm p {
         font-size: 1.2rem;
+        @media (max-width: $screen-sm-min) {
+          font-size: 1.8rem;
+        }
       }
       .selected {
         img {
           border: 8px solid #b4b3b3;
+        }
+      }
+      .btn-tc-default {
+        position: relative;
+        line-height: 1.6rem;
+        &:before {
+          font-family: FontAwesome;
+          content: "\f067";
+          position: absolute;
+          display: block;
+          left: 8px;
+          font-size: 1rem;
+          top: 6px;
+        }
+        &.selected {
+          &:before {
+            font-family: FontAwesome;
+            content: "\f00c";
+            color:#fff;
+          }
         }
       }
     }
@@ -61,6 +84,26 @@ body.page-id-6 {
         }
         span.price {
           color:$color_dark;
+        }
+      }
+      .btn-tc-default {
+        position: relative;
+        line-height: 1.6rem;
+        &:before {
+          font-family: FontAwesome;
+          content: "\f067";
+          position: absolute;
+          display: block;
+          left: 8px;
+          font-size: 1rem;
+          top: 6px;
+        }
+        &.selected {
+          &:before {
+            font-family: FontAwesome;
+            content: "\f00c";
+            color:#fff;
+          }
         }
       }
       label {
