@@ -46,7 +46,7 @@
       $loop = new WP_Query( $args );
       ?>
       <?php if ( $loop->have_posts() ) { ?>
-        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <?php while ( $loop->have_posts() ) : $loop->the_post();?>
         <div class="col-xs-12 col-sm-2 spacer col-product">
           <div class="col-xs-6 col-sm-12" style="padding:0">
             <img src="//placehold.it/165x165" class="img-responsive" />
@@ -75,14 +75,14 @@
       <div class="col-xs-6 col-sm-2 spacer">
         <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2-inverse.png" class="img-responsive" />
       </div>
-      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer selected">
-        <span class="price">&pound;0.00</span>
-        <div class="spacer-sm"><p>for XX tea bags</p></div>
-        <button class="btn btn-tc-default btn-block spacer-sm selected">Selected</button>
+      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer">
+        <span class="price">&pound;3.95</span>
+        <div class="spacer-sm"><p>for 10 tea bags</p></div>
+        <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
       </div>
       <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer">
-        <span class="price">&pound;0.00</span>
-        <div class="spacer-sm"><p>for XX tea bags</p></div>
+        <span class="price">&pound;5.00</span>
+        <div class="spacer-sm"><p>for 15 tea bags</p></div>
         <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
       </div>
       <div class="hidden-xs col-sm-3"></div>
@@ -103,7 +103,7 @@
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-            Billing One
+            Weekly
           </label>
         </div>
       </div>
@@ -111,7 +111,7 @@
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1">
-            Billing Two
+            Fortnightly
           </label>
         </div>
       </div>
@@ -119,7 +119,7 @@
         <div class="radio">
           <label>
             <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1">
-            Billing Three
+            Four Weekly
           </label>
         </div>
       </div>
