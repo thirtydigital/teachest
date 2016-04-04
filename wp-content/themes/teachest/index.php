@@ -62,44 +62,36 @@
     </div>
   </div>
 </div>
-
+<?php $args = array(
+  'post_type' => 'testimonial',
+  'posts_per_page' => 2
+);
+$loop = new WP_Query( $args ); $loop_count = 0;
+?>
+<?php if ( $loop->have_posts() ) { ?>
 <div class="container-fluid socialvalidation">
   <div class="container">
     <div class="row">
       <div class="col-sm-2"></div>
+      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
       <div class="col-sm-4 spacer">
         <i class="fa fa-twitter fa-3x"></i>
-        <p>
-          Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.
-        </p>
+        <p><?php echo get_the_title(); ?></p>
         <div class="media">
           <div class="media-left">
-            <img class="media-object" alt="45x45" src="//placehold.it/45x45">
+            <?php the_post_thumbnail( array(45,45) ); ?>
           </div>
           <div class="media-body">
-            <h4 class="media-heading">@username</h4>
-            <p>1 week ago</p>
+            <h4 class="media-heading">@<?php echo get_the_content(); ?></h4>
           </div>
         </div>
       </div>
-      <div class="col-sm-4 spacer">
-        <p>
-          Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.
-        </p>
-        <div class="media">
-          <div class="media-left">
-            <img class="media-object" alt="45x45" src="//placehold.it/45x45">
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">@username</h4>
-            <p>1 week ago</p>
-          </div>
-        </div>
-      </div>
+      <?php $loop_count++; endwhile;  ?>
       <div class="col-sm-2"></div>
     </div>
   </div>
 </div>
+<?php } wp_reset_postdata(); ?>
 <div class="container-fluid tearange">
   <div class="container">
     <div class="row">
@@ -112,70 +104,43 @@
     </div>
     <div class="row spacer">
       <div class="col-sm-2 hidden-xs"></div>
+      <?php $args = array(
+        'post_type' => 'tea',
+        'posts_per_page' => 10
+      );
+      $loop = new WP_Query( $args ); $loop_count = 0;
+      ?>
+      <?php if ( $loop->have_posts() ) { ?>
       <div class="col-sm-8 teabox" data-ride="carousel">
 
         <div class="no-padding carousel slide">
-          <ol class="carousel-indicators">
+          <!-- <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol>
+          </ol> -->
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <div class="item active">
               <div class="col-sm-5 no-padding">
-                <img src="//placehold.it/325x325" class="img-responsive" />
+                <?php the_post_thumbnail( array(325, 325), array( 'class' => 'img-responsive' ) ); ?>
               </div>
               <div class="col-sm-7 teabox-info">
-                <h3>First Tea</h3>
-                <h4 class="text-uppercase">China</h4>
-                <p>Zhejiang Cloud Green tea is a delicacy from the Zhejiang province in China. A single bud and two leaves are picked to produce a thick nutty flavour that makes a mellow tea with a lingering, sweet aftertaste.</p>
+                <h3><?php echo get_the_title(); ?></h3>
+                <h4 class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></h4>
+                <p><?php echo get_the_content(); ?></p>
                 <p>
                   <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
                 </p>
                 <p>
-                  Temp: 80<sup>&deg;</sup>C<br/>
-                  Steep: 2-3 mins
+                  Temp: <?php echo get_field('recommended_temperature', get_the_ID()); ?><sup>&deg;</sup>C<br/>
+                  Steep: <?php echo get_field('recommended_steep_time', get_the_ID()); ?>
                 </br/>
                 </p>
               </div>
             </div>
-            <div class="item">
-              <div class="col-sm-5 no-padding">
-                <img src="//placehold.it/325x325" class="img-responsive" />
-              </div>
-              <div class="col-sm-7 teabox-info">
-                <h3>Second Tea</h3>
-                <h4 class="text-uppercase">America</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar fringilla.</p>
-                <p>
-                  <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
-                </p>
-                <p>
-                  Temp: 20<sup>&deg;</sup>C<br/>
-                  Steep: 10-30 mins
-                </br/>
-                </p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col-sm-5 no-padding">
-                <img src="//placehold.it/325x325" class="img-responsive" />
-              </div>
-              <div class="col-sm-7 teabox-info">
-                <h3>Third Tea</h3>
-                <h4 class="text-uppercase">India</h4>
-                <p>Lorem ipsum dolor sit amet. Morbi bibendum dignissim imperdiet. Nam vitae consequat dolor, eu facilisis.</p>
-                <p>
-                  <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
-                </p>
-                <p>
-                  Temp: 70<sup>&deg;</sup>C<br/>
-                  Steep: 1-4 mins
-                </br/>
-                </p>
-              </div>
-            </div>
+            <?php $loop_count++; endwhile;  ?>
           </div>
           <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -187,6 +152,7 @@
           </a> -->
         </div>
       </div>
+      <?php } wp_reset_postdata(); ?>
       <div class="col-sm-2 hidden-xs"></div>
     </div>
     <div class="row spacer">

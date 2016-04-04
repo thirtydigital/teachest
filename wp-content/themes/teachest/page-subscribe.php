@@ -43,20 +43,24 @@
         'post_type' => 'product',
         'posts_per_page' => 5
       );
-      $loop = new WP_Query( $args );
+      $loop = new WP_Query( $args ); $loop_count = 0;
       ?>
       <?php if ( $loop->have_posts() ) { ?>
-        <?php while ( $loop->have_posts() ) : $loop->the_post();?>
-        <div class="col-xs-12 col-sm-2 spacer col-product">
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <div class="col-xs-12 col-sm-2 spacer col-product <?php if ($loop_count===0) { ?>selected<?php } ?>">
           <div class="col-xs-6 col-sm-12" style="padding:0">
-            <img src="//placehold.it/165x165" class="img-responsive" />
+            <?php the_post_thumbnail( array(165,165), array( 'class' => 'img-responsive' ) ); ?>
           </div>
           <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
             <div class="spacer-sm"><p><?php the_title(); ?></p></div>
-            <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
+             <?php if ($loop_count===0) { ?>
+            <button class="btn btn-tc-default btn-block spacer-sm selected">Selected</button>
+            <?php } else { ?>
+              <button class="btn btn-tc-default btn-block spacer-sm select">Select</button>
+            <?php } ?>
           </div>
         </div>
-      <?php endwhile;  ?>
+      <?php $loop_count++; endwhile;  ?>
       <?php } wp_reset_postdata(); ?>
       <div class="hidden-xs col-sm-1"></div>
     </div>
