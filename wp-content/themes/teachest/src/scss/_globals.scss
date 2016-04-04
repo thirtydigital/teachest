@@ -22,6 +22,26 @@ body {
       }
     }
   }
+
+  h2, h3 {
+    a {
+      color: $color_dark;
+      text-decoration: none;
+
+      &:focus, &:hover {
+        color: $color_bg;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .aligncenter {
+    text-align: center;
+    margin: 0 auto;
+  }
+  p.wp-caption-text {
+    font-size: 1rem!important;
+  }
 }
 
 header {
@@ -143,7 +163,8 @@ footer {
 
   li, p {
     font-size: 1.5rem;
-    line-height: 1.875rem;
+    line-height: 2.175rem;
     color:$color_default_dark;
+    margin-bottom: 20px;
   }
 }
