@@ -14,6 +14,7 @@ function register_menus()
 		array(
       'main-menu' => __('Main Menu'),
       'main-menu-footer' => __('Main Menu Footer'),
+      'our-range-categories' => __('Our Range Categories'),
     )
 	);
 }

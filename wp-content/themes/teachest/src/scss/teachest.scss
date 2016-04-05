@@ -24,3 +24,22 @@
   font-size: 1.1rem;
   line-height: 1.6rem;
 }
+
+
+.tea-categories {
+  ul.list-inline {
+    li {
+      text-align: center;
+      margin: 0 1rem;
+      a {
+        color: $color_default;
+        font-size: 1.25rem;
+
+        &.active, &.focus, &:hover {
+          text-decoration: none;
+          color:$color_default_dark;
+        }
+      }
+    }
+  }
+}
