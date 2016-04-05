@@ -144,7 +144,10 @@
     <div class="row">
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
-        <form class="form-horizontal spacer" action="/payment/">
+        <form class="form-horizontal spacer" action="/payment/" method="post">
+          <?php do_action( 'woocommerce_register_form_start' ); ?>
+          <?php do_action( 'woocommerce_register_form' ); ?>
+          <?php do_action( 'register_form' ); ?>
           <!-- <div class="row"> -->
             <div class="form-group">
               <label class="col-sm-4 control-label text-uppercase">First Name<sup>*</sup></label>
@@ -165,7 +168,7 @@
             <div class="form-group">
               <label class="col-sm-4 control-label text-uppercase">Email Address<sup>*</sup></label>
               <div class="col-sm-8">
-                <input type="email" class="form-control input-lg" id="" placeholder="">
+                <input type="email" class="form-control input-lg" name="email" id="reg_email" placeholder="" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
               </div>
             </div>
           <!-- </div> -->
@@ -173,17 +176,20 @@
             <div class="form-group">
               <label class="col-sm-4 control-label text-uppercase">Choose Password<sup>*</sup></label>
               <div class="col-sm-8">
-                <input type="password" class="form-control input-lg" id="" placeholder="">
+                <input type="password" class="form-control input-lg" name="password" id="reg_password" placeholder="" value="<?php if ( ! empty( $_POST['password'] ) ) echo esc_attr( $_POST['password'] ); ?>" />
               </div>
             </div>
           <!-- </div> -->
           <!-- <div class="row"> -->
             <div class="form-group">
               <div class="col-sm-12 text-center">
-                <button type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer">Submit</button>
+                <?php wp_nonce_field( 'woocommerce-register', 'register' ); ?>
+      					<?php wp_referer_field(); ?>
+                <button type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register">Submit</button>
               </div>
             </div>
           <!-- </div> -->
+          <?php do_action( 'woocommerce_register_form_end' ); ?>
         </form>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
