@@ -9,12 +9,7 @@
 ?>
 <?php get_header();?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <?php if (has_post_thumbnail(get_the_ID())) : ?>
-    <?php $image = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>
-    <div class="jumbotron" style="background-image: url('<?php echo $image; ?>'); background-size:cover;">
-  <?php else :  ?>
-    <div class="jumbotron">
-  <?php endif; ?>
+<div class="jumbotron">
   <div class="container text-center">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
@@ -32,6 +27,5 @@
     </div>
   </div>
 </div>
-<?php endwhile; else : ?>
-<?php endif; ?>
+<?php endwhile; ?><?php endif; ?>
 <?php get_footer();?>
