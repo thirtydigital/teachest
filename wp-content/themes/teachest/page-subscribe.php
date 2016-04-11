@@ -144,54 +144,33 @@
     <div class="row">
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
-        <?php wp_login_form(); ?>
-
-        <form class="form-horizontal spacer" action="/payment/" method="post">
-          <?php do_action( 'woocommerce_register_form_start' ); ?>
-          <?php do_action( 'woocommerce_register_form' ); ?>
-          <?php do_action( 'register_form' ); ?>
-          <!-- <div class="row"> -->
-            <div class="form-group">
-              <label class="col-sm-4 control-label text-uppercase">First Name<sup>*</sup></label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control input-lg" id="" placeholder="">
-              </div>
+        <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
+    		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
+        <form method="post" class="login form-horizontal spacer">
+          <?php do_action( 'woocommerce_login_form_start' ); ?>
+          <div class="form-group">
+            <label class="col-sm-4 control-label text-uppercase"><?php _e( 'Email address', 'woocommerce' ); ?><sup>*</sup></label>
+            <div class="col-sm-8">
+              <input type="text" class="input-text form-control input-lg" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
             </div>
-          <!-- </div> -->
-          <!-- <div class="row"> -->
-            <div class="form-group">
-              <label class="col-sm-4 control-label text-uppercase">Last Name<sup>*</sup></label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control input-lg" id="" placeholder="">
-              </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label text-uppercase"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
+            <div class="col-sm-8">
+              <input class="input-text form-control input-lg" type="password" name="password" id="password" />
+              <p class="lost_password">
+        				<small><a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'woocommerce' ); ?></a></small>
+        			</p>
             </div>
-          <!-- </div> -->
-          <!-- <div class="row"> -->
-            <div class="form-group">
-              <label class="col-sm-4 control-label text-uppercase">Email Address<sup>*</sup></label>
-              <div class="col-sm-8">
-                <input type="email" class="form-control input-lg" name="email" id="reg_email" placeholder="" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
-              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12 text-center">
+              <?php wp_nonce_field( 'woocommerce-login' ); ?>
+              <?php wp_referer_field(); ?>
+              <button type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="register">Submit</button>
             </div>
-          <!-- </div> -->
-          <!-- <div class="row"> -->
-            <div class="form-group">
-              <label class="col-sm-4 control-label text-uppercase">Choose Password<sup>*</sup></label>
-              <div class="col-sm-8">
-                <input type="password" class="form-control input-lg" name="password" id="reg_password" placeholder="" value="<?php if ( ! empty( $_POST['password'] ) ) echo esc_attr( $_POST['password'] ); ?>" />
-              </div>
-            </div>
-          <!-- </div> -->
-          <!-- <div class="row"> -->
-            <div class="form-group">
-              <div class="col-sm-12 text-center">
-                <?php wp_nonce_field( 'woocommerce-register', 'register' ); ?>
-      					<?php wp_referer_field(); ?>
-                <button type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register">Submit</button>
-              </div>
-            </div>
-          <!-- </div> -->
-          <?php do_action( 'woocommerce_register_form_end' ); ?>
+          </div>
+          <?php do_action( 'woocommerce_login_form_end' ); ?>
         </form>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
