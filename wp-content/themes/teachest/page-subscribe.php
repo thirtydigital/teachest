@@ -144,6 +144,8 @@
     <div class="row">
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
+        <?php wp_login_form(); ?>
+
         <form class="form-horizontal spacer" action="/payment/" method="post">
           <?php do_action( 'woocommerce_register_form_start' ); ?>
           <?php do_action( 'woocommerce_register_form' ); ?>
