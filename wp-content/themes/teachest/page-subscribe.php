@@ -135,19 +135,26 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign In / Register</h2>
-        <p class="width-thin">
-          Create an account from where you can manage your TeaChest subscription and payment methods.
+        <?php if (is_user_logged_in()) { ?>
+        <?php global $current_user; get_currentuserinfo();?>
+        <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Checkout</h2>
+        <p>
+          You're logged in as: <?php echo $current_user->display_name; ?>. <br /><small>Not you? <a href="<?php echo wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ); ?>">Sign out</a></small>
         </p>
+        <?php } else { ?>
+          <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign In / Register</h2>
+          <p class="width-thin">
+            Create an account from where you can manage your TeaChest subscription and payment methods.
+          </p>
+        <?php } ?>
       </div>
     </div>
     <div class="row">
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
+        <div class="woocommerce"><br /><?php wc_print_notices(); ?></div>
         <?php if (is_user_logged_in()) { ?>
-          <?php global $current_user; get_currentuserinfo();?>
           <div class="col-sm-12 text-center">
-            <h3>Welcome back, <span class="text-uppercase"><?php echo $current_user->display_name; ?></span>.</h3>
             <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
           </div>
         <?php } else { ?>
@@ -170,11 +177,12 @@
         			</p>
             </div>
           </div>
+          <?php do_action( 'woocommerce_login_form' ); ?>
           <div class="form-group">
             <div class="col-sm-12 text-center">
               <?php wp_nonce_field( 'woocommerce-login' ); ?>
               <?php wp_referer_field(); ?>
-              <button type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="register">Sign In</button>
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="login" value="<?php esc_attr_e( 'Sign In', 'woocommerce' ); ?>" />
             </div>
           </div>
           <?php do_action( 'woocommerce_login_form_end' ); ?>

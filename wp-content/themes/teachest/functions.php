@@ -55,26 +55,16 @@ add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
  */
 function wooc_save_extra_register_fields( $customer_id ) {
 	if ( isset( $_POST['billing_first_name'] ) ) {
-		// WordPress default first name field.
 		update_user_meta( $customer_id, 'first_name', sanitize_text_field( $_POST['billing_first_name'] ) );
-
-		// WooCommerce billing first name.
 		update_user_meta( $customer_id, 'billing_first_name', sanitize_text_field( $_POST['billing_first_name'] ) );
 	}
 
 	if ( isset( $_POST['billing_last_name'] ) ) {
-		// WordPress default last name field.
 		update_user_meta( $customer_id, 'last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
-
-		// WooCommerce billing last name.
 		update_user_meta( $customer_id, 'billing_last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
 	}
 
 }
-
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
-
-
-require_once( 'lib/woocommerce-api.php' );
 ?>

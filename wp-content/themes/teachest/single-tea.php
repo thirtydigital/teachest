@@ -26,16 +26,15 @@
         <br />
       </div>
       <div class="col-xs-12 col-sm-8">
-        <h3 class="media-heading"><?php echo get_the_title(); ?></h3>
-        <h4 class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></h4>
         <p><?php echo get_the_content(); ?></p>
         <p>
           <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
         </p>
         <p>
+          Origin: <span class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></span><br />
           Temp: <?php echo get_field('recommended_temperature', get_the_ID()); ?><sup>&deg;</sup>C<br/>
           Steep: <?php echo get_field('recommended_steep_time', get_the_ID()); ?>
-        </br/>
+          <br />
         </p>
       </div>
     </div>

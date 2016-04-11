@@ -127,7 +127,7 @@ $loop = new WP_Query( $args ); $loop_count = 0;
                 <?php the_post_thumbnail( array(325, 325), array( 'class' => 'img-responsive' ) ); ?>
               </div>
               <div class="col-sm-7 teabox-info">
-                <h3><?php echo get_the_title(); ?></h3>
+                <h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
                 <h4 class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></h4>
                 <p><?php echo get_the_content(); ?></p>
                 <p>
