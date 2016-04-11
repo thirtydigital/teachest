@@ -135,7 +135,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign Up</h2>
+        <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign In / Register</h2>
         <p class="width-thin">
           Create an account from where you can manage your TeaChest subscription and payment methods.
         </p>
@@ -144,9 +144,16 @@
     <div class="row">
       <div class="hidden-xs hidden-sm col-md-3"></div>
       <div class="col-md-6">
+        <?php if (is_user_logged_in()) { ?>
+          <?php global $current_user; get_currentuserinfo();?>
+          <div class="col-sm-12 text-center">
+            <h3>Welcome back, <span class="text-uppercase"><?php echo $current_user->display_name; ?></span>.</h3>
+            <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
+          </div>
+        <?php } else { ?>
         <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
-    		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
-        <form method="post" class="login form-horizontal spacer">
+    		<h3 class="text-uppercase spacer"><strong><?php _e( 'Sign In', 'woocommerce' ); ?></strong></h3><br />
+        <form method="post" class="login form-horizontal">
           <?php do_action( 'woocommerce_login_form_start' ); ?>
           <div class="form-group">
             <label class="col-sm-4 control-label text-uppercase"><?php _e( 'Email address', 'woocommerce' ); ?><sup>*</sup></label>
@@ -167,11 +174,44 @@
             <div class="col-sm-12 text-center">
               <?php wp_nonce_field( 'woocommerce-login' ); ?>
               <?php wp_referer_field(); ?>
-              <button type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="register">Submit</button>
+              <button type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="register">Sign In</button>
             </div>
           </div>
           <?php do_action( 'woocommerce_login_form_end' ); ?>
         </form>
+
+        <hr class="dark" />
+
+        <h3 class="text-uppercase spacer"><strong><?php _e( 'Register', 'woocommerce' ); ?></strong></h3><br />
+    		<form method="post" class="register form-horizontal">
+    			<?php do_action( 'woocommerce_register_form_start' ); ?>
+          <div class="form-group">
+            <label for="reg_email" class="col-sm-4 control-label text-uppercase"><?php _e( 'Email address', 'woocommerce' ); ?> <span>*</span></label>
+            <div class="col-sm-8">
+              <input type="email" class="input-text form-control input-lg" name="email" id="reg_email" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg_password" class="col-sm-4 control-label text-uppercase"><?php _e( 'Password', 'woocommerce' ); ?> <span class="">*</span></label>
+            <div class="col-sm-8">
+              <input type="password" class="input-text form-control input-lg" name="password" id="reg_password" />
+            </div>
+          </div>
+    			<!-- Spam Trap -->
+    			<div style="<?php echo ( ( is_rtl() ) ? 'right' : 'left' ); ?>: -999em; position: absolute;"><label for="trap"><?php _e( 'Anti-spam', 'woocommerce' ); ?></label><input type="text" name="email_2" id="trap" tabindex="-1" /></div>
+    			<?php do_action( 'woocommerce_register_form' ); ?>
+    			<?php do_action( 'register_form' ); ?>
+          <div class="form-group">
+            <div class="col-sm-12 text-center">
+              <?php wp_nonce_field( 'woocommerce-register' ); ?>
+              <?php wp_referer_field(); ?>
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
+            </div>
+          </div>
+    			<?php do_action( 'woocommerce_register_form_end' ); ?>
+    		</form>
+        <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
+        <?php } ?>
       </div>
       <div class="hidden-xs hidden-sm col-md-3"></div>
     </div>
