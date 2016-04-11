@@ -35,12 +35,18 @@ wc_print_notices(); ?>
 	?>
 </p>
 
+<hr class="dark"  />
+
 <?php do_action( 'woocommerce_before_my_account' ); ?>
 
 <?php wc_get_template( 'myaccount/my-downloads.php' ); ?>
 
 <?php wc_get_template( 'myaccount/my-orders.php', array( 'order_count' => $order_count ) ); ?>
 
+<hr class="dark"  />
+
 <?php wc_get_template( 'myaccount/my-address.php' ); ?>
+
+<hr class="dark"  />
 
 <?php do_action( 'woocommerce_after_my_account' ); ?>
