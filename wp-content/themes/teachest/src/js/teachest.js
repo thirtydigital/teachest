@@ -35,4 +35,14 @@ $(document).ready(function () {
     e.preventDefault()
     return false
   })
+
+  $('.btn-already-registered').on('click', function (e) {
+    var hideClass = 'hidden'
+    $(this).parent().addClass(hideClass)
+    $('.form-horizontal.register').addClass(hideClass)
+    $('.form-horizontal.login').removeClass(hideClass)
+
+    e.preventDefault()
+    return false
+  })
 })

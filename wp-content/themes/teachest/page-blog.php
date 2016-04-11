@@ -12,13 +12,11 @@
  */
 ?>
 <?php get_header();?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="jumbotron">
   <div class="container text-center">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-      <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue sapien, dignissim sed metus pulvinar, fringilla fermentum odio. Nulla sed arcu lectus.</p> -->
+      <h1 class="display-3 text-uppercase">Blog</h1>
     </div>
     <div class="col-sm-1"></div>
   </div>
@@ -26,12 +24,19 @@
 <div class="container-fluid generic-content">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <?php the_content(); ?>
+      <div class="col-sm-12 text-center">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <div class="text-center">
+            <?php the_post_thumbnail( array(300, 300) ); ?>
+          </div>
+          <h2 class="text-center text-uppercase"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2><br/>
+          <?php the_excerpt(); ?><br/>
+          <a href="<?php the_permalink(); ?>" class="text-center btn btn-tc-default btn-lg">Read more</a>
+          <hr class="dark" />
+        <?php endwhile; else : ?>
+        <?php endif; ?>
       </div>
     </div>
   </div>
 </div>
-<?php endwhile; else : ?>
-<?php endif; ?>
 <?php get_footer();?>

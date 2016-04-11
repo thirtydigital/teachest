@@ -142,9 +142,12 @@
           You're logged in as: <?php echo $current_user->display_name; ?>. <br /><small>Not you? <a href="<?php echo wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ); ?>">Sign out</a></small>
         </p>
         <?php } else { ?>
-          <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign In / Register</h2>
+          <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign Up</h2>
           <p class="width-thin">
             Create an account from where you can manage your TeaChest subscription and payment methods.
+          </p>
+          <p>
+            <small>Already registered? <a href="#" class="btn-already-registered">Sign in</a></small>
           </p>
         <?php } ?>
       </div>
@@ -159,8 +162,7 @@
           </div>
         <?php } else { ?>
         <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
-    		<h3 class="text-uppercase spacer"><strong><?php _e( 'Sign In', 'woocommerce' ); ?></strong></h3><br />
-        <form method="post" class="login form-horizontal">
+        <form method="post" class="login form-horizontal hidden">
           <?php do_action( 'woocommerce_login_form_start' ); ?>
           <div class="form-group">
             <label class="col-sm-4 control-label text-uppercase"><?php _e( 'Email address', 'woocommerce' ); ?><sup>*</sup></label>
@@ -188,9 +190,6 @@
           <?php do_action( 'woocommerce_login_form_end' ); ?>
         </form>
 
-        <hr class="dark" />
-
-        <h3 class="text-uppercase spacer"><strong><?php _e( 'Register', 'woocommerce' ); ?></strong></h3><br />
     		<form method="post" class="register form-horizontal">
     			<?php do_action( 'woocommerce_register_form_start' ); ?>
           <div class="form-group">
