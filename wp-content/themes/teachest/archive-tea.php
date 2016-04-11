@@ -16,7 +16,7 @@
   <div class="container text-center">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-      <h1 class="display-3 text-uppercase"><?php echo the_title(); ?></h1>
+      <h1 class="display-3 text-uppercase">r<?php echo the_title(); ?></h1>
       <nav class="tea-categories">
         <?php wp_nav_menu( array( 'theme_location' => 'our-range-categories', 'container' => false, 'menu_class' => 'list-inline') ); ?>
       </nav>
@@ -26,15 +26,9 @@
 </div>
 <div class="container-fluid generic-content">
   <div class="container">
-    <?php $args = array(
-      'post_type' => 'tea',
-      'posts_per_page' => 10
-    );
-    $loop = new WP_Query( $args ); $loop_count = 0;
-    ?>
-    <?php if ( $loop->have_posts() ) { ?>
+    <?php if ( have_posts() ) : ?>
     <div class="row">
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
       <div class="col-sm-4 our-range-tea">
         <div class="media">
           <div class="media-left">
@@ -49,7 +43,7 @@
       </div>
       <?php endwhile; ?>
     </div>
-    <?php } ?>
+  <?php endif; ?>
   </div>
 </div>
 <?php get_footer();?>
