@@ -30,10 +30,33 @@ $(document).ready(function () {
   })
 
   $('.col-product .btn-tc-default').on('click', function (e) {
+    var productID = $(this).data('id')
+
+    // Visuals
     $('.col-product').removeClass('selected').find('.btn-tc-default').removeClass('selected').html('Select')
     $(this).html('Selected').addClass('selected').parent().parent().addClass('selected')
+
+    $('input.productID').val(productID)
+
     e.preventDefault()
     return false
+  })
+
+  $('.col-prices .btn-price-selector').on('click', function (e) {
+    var productPrice = $(this).data('price')
+    $('input.productPrice').val(productPrice)
+
+    // Visuals
+    $('.col-prices').removeClass('selected').find('.btn-tc-default').removeClass('selected').html('Select')
+    $(this).html('Selected').addClass('selected').parent().addClass('selected')
+
+    e.preventDefault()
+    return false
+  })
+
+  $('.btn-schedule-selector').on('click', function (e) {
+    var productSchedule = $(this).data('schedule')
+    $('input.productSchedule').val(productSchedule)
   })
 
   $('.btn-already-registered').on('click', function (e) {

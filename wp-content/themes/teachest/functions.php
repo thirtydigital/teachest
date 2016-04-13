@@ -1,4 +1,6 @@
 <?php
+global $woocommerce;
+
 /*===========================
   Add WooCommerce Theme Support
 ===========================*/
@@ -27,7 +29,7 @@ add_action( 'init', 'register_menus' );
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+    return 55;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
@@ -75,7 +77,64 @@ function wooc_save_extra_register_fields( $customer_id ) {
 		update_user_meta( $customer_id, 'billing_last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
 	}
 
+  if ( isset( $_POST['product-subscription'] ) && '1' == $_POST['product-subscription'] ) {
+    add_sub_to_basket();
+	}
 }
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
+
+
+
+
+function add_sub_to_basket() {
+	if ( isset( $_POST['product-subscription'] ) && '1' == $_POST['product-subscription'] ) {
+    // var_dump($_POST['product-subscription']);
+    // $$woocommerce->cart->add_to_cart( $product_id, $nos, $variationid, $spec, null );
+
+    // Collect the product info send through
+    $productID = $_POST['productID'];
+    $productPrice = $_POST['productPrice'];
+    $productSchedule = $_POST['productSchedule'];
+
+    $args = array(
+      'post_parent' => $productID,
+      'post_type' => array('product_variation'),
+      'meta_query' => array(
+        array(
+          'key' => '_subscription_price',
+          'value' => $productPrice
+        ),
+        array(
+          'key' => '_subscription_period_interval',
+          'value' => $productSchedule
+        )
+      )
+    );
+
+      // 'meta_query' => array(
+      //   // array(
+      //   //   'key' => '_subscription_period',
+      //   //   'value' => 'week'
+      //   // ),
+      //   array(
+      //     'key' => '_subscription_price',
+      //     'value' => '3.25'
+      //   )
+      // )
+    // );
+    $query = new WP_Query($args);
+
+    $query->the_post();
+    $variantID = get_the_ID();
+
+    global $woocommerce;
+    $woocommerce->cart->add_to_cart( $productID, 1, $variantID);
+
+    // die();
+
+	}
+}
+add_action( 'init', 'add_sub_to_basket' );
+
 
 ?>

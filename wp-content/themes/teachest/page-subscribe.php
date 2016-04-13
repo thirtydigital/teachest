@@ -11,7 +11,7 @@
  * @since Tea Chest 2.0
  */
 ?>
-<?php get_header();?>
+<?php get_header(); global $product;?>
 <div class="jumbotron">
   <div class="container text-center">
     <div class="col-sm-1"></div>
@@ -47,17 +47,13 @@
       ?>
       <?php if ( $loop->have_posts() ) { ?>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <div class="col-xs-12 col-sm-2 spacer col-product <?php if ($loop_count===0) { ?>selected<?php } ?>">
+        <div class="col-xs-12 col-sm-2 spacer col-product">
           <div class="col-xs-6 col-sm-12" style="padding:0">
             <?php the_post_thumbnail( array(165,165), array( 'class' => 'img-responsive' ) ); ?>
           </div>
           <div class="col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-12" style="padding:0">
             <div class="spacer-sm"><p><?php the_title(); ?></p></div>
-             <?php if ($loop_count===0) { ?>
-            <button class="btn btn-tc-default btn-block spacer-sm selected">Selected</button>
-            <?php } else { ?>
-              <button class="btn btn-tc-default btn-block spacer-sm select">Select</button>
-            <?php } ?>
+            <button class="btn btn-tc-default btn-block spacer-sm select" data-id="<?php echo get_the_ID(); ?>">Select</button>
           </div>
         </div>
       <?php $loop_count++; endwhile;  ?>
@@ -79,15 +75,15 @@
       <div class="col-xs-6 col-sm-2 spacer">
         <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2-inverse.png" class="img-responsive" />
       </div>
-      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer">
+      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer col-prices">
         <span class="price">&pound;3.95</span>
         <div class="spacer-sm"><p>for 10 tea bags</p></div>
-        <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
+        <button class="btn btn-tc-default btn-block spacer-sm btn-price-selector" data-price="3.95">Select</button>
       </div>
-      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer">
+      <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer col-prices">
         <span class="price">&pound;5.00</span>
         <div class="spacer-sm"><p>for 15 tea bags</p></div>
-        <button class="btn btn-tc-default btn-block spacer-sm">Select</button>
+        <button class="btn btn-tc-default btn-block spacer-sm btn-price-selector" data-price="5.00">Select</button>
       </div>
       <div class="hidden-xs col-sm-3"></div>
     </div>
@@ -106,7 +102,7 @@
       <div class="col-xs-6 col-sm-2">
         <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" data-schedule='1' class='btn-schedule-selector'>
             Weekly
           </label>
         </div>
@@ -114,7 +110,7 @@
       <div class="col-xs-6 col-sm-2">
         <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1">
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1" data-schedule='2' class='btn-schedule-selector'>
             Fortnightly
           </label>
         </div>
@@ -122,7 +118,7 @@
       <div class="col-xs-6 col-sm-2">
         <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1">
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1" data-schedule='4' class='btn-schedule-selector'>
             Four Weekly
           </label>
         </div>
@@ -158,7 +154,13 @@
         <div class="woocommerce"><br /><?php wc_print_notices(); ?></div>
         <?php if (is_user_logged_in()) { ?>
           <div class="col-sm-12 text-center">
-            <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
+            <form method="post" action="/checkout/">
+              <input type="text" class="productID" id="productID" name="productID" value="" />
+              <input type="text" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
+              <input type="text" class="productPrice" id="productPrice" name="productPrice" value="" />
+              <input type="hidden" name="product-subscription" value="1" />
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
+            </form>
           </div>
         <?php } else { ?>
         <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
@@ -184,6 +186,10 @@
             <div class="col-sm-12 text-center">
               <?php wp_nonce_field( 'woocommerce-login' ); ?>
               <?php wp_referer_field(); ?>
+              <input type="text" class="productID" id="productID" name="productID" value="" />
+              <input type="text" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
+              <input type="text" class="productPrice" id="productPrice" name="productPrice" value="" />
+              <input type="hidden" name="product-subscription" value="1" />
               <input type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="login" value="<?php esc_attr_e( 'Sign In', 'woocommerce' ); ?>" />
             </div>
           </div>
@@ -210,6 +216,10 @@
     			<?php do_action( 'register_form' ); ?>
           <div class="form-group">
             <div class="col-sm-12 text-center">
+              <input type="text" class="productID" id="productID" name="productID" value="" />
+              <input type="text" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
+              <input type="text" class="productPrice" id="productPrice" name="productPrice" value="" />
+              <input type="hidden" name="product-subscription" value="1" />
               <?php wp_nonce_field( 'woocommerce-register' ); ?>
               <?php wp_referer_field(); ?>
               <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />

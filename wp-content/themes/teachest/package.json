@@ -19,5 +19,9 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3"
+  },
+  "dependencies": {
+    "require": "^2.4.20",
+    "woocommerce-api": "^1.1.1"
   }
 }
