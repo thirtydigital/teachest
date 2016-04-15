@@ -53,9 +53,9 @@
 
 
 .woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
-  float: none;
+  float: none!important;
 }
 
 #add_payment_method #payment, .woocommerce-checkout #payment {
-  background: none;
+  background: none!important;
 }
