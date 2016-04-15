@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 do_action( 'woocommerce_review_order_after_cart_contents' );
 ?>
-
+<span class="text-left">
 <?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
 <?php if ( apply_filters( 'woocommerce_enable_order_notes_field', get_option( 'woocommerce_enable_order_comments', 'yes' ) === 'yes' ) ) : ?>
@@ -52,5 +52,5 @@ do_action( 'woocommerce_review_order_after_cart_contents' );
 	<?php endforeach; ?>
 
 <?php endif; ?>
-
+</span>
 <?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
