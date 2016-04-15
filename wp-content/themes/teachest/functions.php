@@ -76,14 +76,23 @@ function wooc_save_extra_register_fields( $customer_id ) {
 		update_user_meta( $customer_id, 'last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
 		update_user_meta( $customer_id, 'billing_last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
 	}
-
-  if ( isset( $_POST['product-subscription'] ) && '1' == $_POST['product-subscription'] ) {
-    add_sub_to_basket();
-	}
 }
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
-
+/*=====================================
+ Redirect user after successful login.
+===================================*/
+function ras_login_redirect( $redirect_to ) {
+  if ( isset( $_POST['product-subscription'] ) && '1' == $_POST['product-subscription'] ) {
+    $redirect_to = '/checkout/';
+  }
+ else {
+   $redirect_to = '/my-account/';
+ }
+ return $redirect_to;
+}
+add_filter('woocommerce_login_redirect', 'ras_login_redirect');
+add_filter('woocommerce_registration_redirect', 'ras_login_redirect');
 
 
 function add_sub_to_basket() {
@@ -111,17 +120,6 @@ function add_sub_to_basket() {
       )
     );
 
-      // 'meta_query' => array(
-      //   // array(
-      //   //   'key' => '_subscription_period',
-      //   //   'value' => 'week'
-      //   // ),
-      //   array(
-      //     'key' => '_subscription_price',
-      //     'value' => '3.25'
-      //   )
-      // )
-    // );
     $query = new WP_Query($args);
 
     $query->the_post();
@@ -129,9 +127,6 @@ function add_sub_to_basket() {
 
     global $woocommerce;
     $woocommerce->cart->add_to_cart( $productID, 1, $variantID);
-
-    // die();
-
 	}
 }
 add_action( 'init', 'add_sub_to_basket' );

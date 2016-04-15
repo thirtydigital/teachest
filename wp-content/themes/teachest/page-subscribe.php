@@ -155,9 +155,9 @@
         <?php if (is_user_logged_in()) { ?>
           <div class="col-sm-12 text-center">
             <form method="post" action="/checkout/">
-              <input type="text" class="productID" id="productID" name="productID" value="" />
-              <input type="text" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
-              <input type="text" class="productPrice" id="productPrice" name="productPrice" value="" />
+              <input type="hidden" class="productID" id="productID" name="productID" value="" />
+              <input type="hidden" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
+              <input type="hidden" class="productPrice" id="productPrice" name="productPrice" value="" />
               <input type="hidden" name="product-subscription" value="1" />
               <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
             </form>
@@ -186,9 +186,9 @@
             <div class="col-sm-12 text-center">
               <?php wp_nonce_field( 'woocommerce-login' ); ?>
               <?php wp_referer_field(); ?>
-              <input type="text" class="productID" id="productID" name="productID" value="" />
-              <input type="text" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
-              <input type="text" class="productPrice" id="productPrice" name="productPrice" value="" />
+              <input type="hidden" class="productID" id="productID" name="productID" value="" />
+              <input type="hidden" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
+              <input type="hidden" class="productPrice" id="productPrice" name="productPrice" value="" />
               <input type="hidden" name="product-subscription" value="1" />
               <input type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="login" value="<?php esc_attr_e( 'Sign In', 'woocommerce' ); ?>" />
             </div>
@@ -216,9 +216,9 @@
     			<?php do_action( 'register_form' ); ?>
           <div class="form-group">
             <div class="col-sm-12 text-center">
-              <input type="text" class="productID" id="productID" name="productID" value="" />
-              <input type="text" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
-              <input type="text" class="productPrice" id="productPrice" name="productPrice" value="" />
+              <input type="hidden" class="productID" id="productID" name="productID" value="" />
+              <input type="hidden" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
+              <input type="hidden" class="productPrice" id="productPrice" name="productPrice" value="" />
               <input type="hidden" name="product-subscription" value="1" />
               <?php wp_nonce_field( 'woocommerce-register' ); ?>
               <?php wp_referer_field(); ?>

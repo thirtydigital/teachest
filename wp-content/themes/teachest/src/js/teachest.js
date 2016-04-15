@@ -24,10 +24,10 @@ $(document).ready(function () {
     return false
   })
 
-  $('.payment-different-address input').change(function () {
-    $(this).parent().parent().parent().remove()
-    $('.payment-different-address-panel').toggleClass('hidden')
-  })
+  // $('.payment-different-address input').change(function () {
+  //   $(this).parent().parent().parent().remove()
+  //   $('.payment-different-address-panel').toggleClass('hidden')
+  // })
 
   $('.col-product .btn-tc-default').on('click', function (e) {
     var productID = $(this).data('id')
