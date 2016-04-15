@@ -50,3 +50,12 @@
     }
   }
 }
+
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  float: none;
+}
+
+#add_payment_method #payment, .woocommerce-checkout #payment {
+  background: none;
+}
