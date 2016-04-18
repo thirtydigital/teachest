@@ -1,5 +1,5 @@
 .woocommerce {
-  .woocommerce-message, address {
+  .woocommerce-message, address, .woocommerce-info {
     font-size: 1.2rem
   }
 }
@@ -12,4 +12,8 @@
       top: 20px;
       position: relative;
     }
+}
+
+.woocommerce form .form-row.woocommerce-validated .select2-container, .woocommerce form .form-row.woocommerce-validated input.input-text, .woocommerce form .form-row.woocommerce-validated select {
+  border-color: #b4b3b3!important;
 }

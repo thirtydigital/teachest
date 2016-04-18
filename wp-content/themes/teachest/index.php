@@ -14,6 +14,9 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
+      <?php if (is_checkout()) { ?>
+        <p>Enter your personal details and payment information to complete your account and manage your TeaChest subscription along with your order details. You can also see a delivery estimate.  </p>
+      <?php } ?>
     </div>
     <div class="col-sm-1"></div>
   </div>

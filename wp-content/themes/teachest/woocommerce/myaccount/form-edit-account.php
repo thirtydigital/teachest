@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <form class="edit-account" action="" method="post">
 
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
-    <h2>Edit Account</h2>
+    <h3>Edit Account</h3>
 	<p class="form-row form-row-first">
 		<label for="account_first_name"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="text" class="input-text form-control input-lg" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $user->first_name ); ?>" />
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</p>
   <hr class="dark" />
 	<fieldset>
-		<h2><?php _e( 'Change Password', 'woocommerce' ); ?></h2>
+		<h3><?php _e( 'Change Password', 'woocommerce' ); ?></h3>
 
 		<p class="form-row form-row-wide">
 			<label for="password_current"><?php _e( 'Current Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>

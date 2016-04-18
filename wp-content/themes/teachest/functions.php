@@ -126,6 +126,10 @@ function add_sub_to_basket() {
     $variantID = get_the_ID();
 
     global $woocommerce;
+    // Empty the cart so there is only one in there
+    $woocommerce->cart->empty_cart();
+
+    // Add the subscription to the cart
     $woocommerce->cart->add_to_cart( $productID, 1, $variantID);
 	}
 }
