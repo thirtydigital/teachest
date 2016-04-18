@@ -44,11 +44,11 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
           <p class="text-center">
             Complete your account and get started with your TeaChest journey. 
           </p>
-          <div class="hidden-xs hidden-sm col-md-3"></div>
-          <div class="col-md-6">
+          <div class="hidden-xs hidden-sm col-md-2"></div>
+          <div class="col-md-8">
             <?php do_action( 'woocommerce_checkout_billing' ); ?>
           </div>
-          <div class="hidden-xs hidden-sm col-md-3"></div>
+          <div class="hidden-xs hidden-sm col-md-2"></div>
         </div>
       </div>
 
@@ -64,11 +64,11 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
         <div class="col-sm-12 text-center">
           <h2 class="text-uppercase">Ship to a different address?</h2>
         </div>
-        <div class="hidden-xs hidden-sm col-md-3"></div>
-        <div class="col-md-6 payment-different-address-panel">
+        <div class="hidden-xs hidden-sm col-md-2"></div>
+        <div class="col-md-8 payment-different-address-panel">
           <?php do_action( 'woocommerce_checkout_shipping' ); ?>
         </div>
-        <div class="hidden-xs hidden-sm col-md-3"></div>
+        <div class="hidden-xs hidden-sm col-md-2"></div>
       </div>
 
       <div class="row">
@@ -88,11 +88,11 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
       <div class="col-sm-12 text-center">
         <h2 class="text-uppercase">Your order</h2>
       </div>
-      <div class="hidden-xs hidden-sm col-md-3"></div>
-      <div class="col-md-6 text-center">
+      <div class="hidden-xs hidden-sm col-md-2"></div>
+      <div class="col-md-8 text-center">
         <?php do_action( 'woocommerce_checkout_order_review' ); ?>
       </div>
-      <div class="hidden-xs hidden-sm col-md-3"></div>
+      <div class="hidden-xs hidden-sm col-md-2"></div>
     </div>
     <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
   </form>

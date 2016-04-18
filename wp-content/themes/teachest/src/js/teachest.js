@@ -6,6 +6,10 @@ $(document).ready(function () {
     $('.carousel').carousel()
   }
 
+  if ($('.subscribe-step').length > 0) {
+    checkValidationSubs()
+  }
+
   function scrollToId (idName) {
     $('html, body').animate({ scrollTop: $(idName).offset().top - 50 }, 1000)
 
@@ -75,6 +79,10 @@ $(document).ready(function () {
     e.preventDefault()
     return false
   })
+
+  // if ($('body.woocommerce-checkout input#place_order').length) {
+  //   $('body.woocommerce-checkout input#place_order').addClass('btn btn-tc-default btn-xl text-uppercase spacer')
+  // }
 
   function checkValidationSubs () {
     var button = $('.btn-sub-progress')
