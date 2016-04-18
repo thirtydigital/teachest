@@ -24,7 +24,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <?php if ( have_posts() ) : ?><?php while ( have_posts() ) : the_post(); ?>
-      <div class="col-sm-4 our-range-tea">
+      <div class="col-sm-4 our-range-tea spacer">
         <div class="media">
           <div class="media-left">
             <?php the_post_thumbnail( array(100,100) ); ?>

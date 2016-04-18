@@ -106,7 +106,7 @@ $loop = new WP_Query( $args ); $loop_count = 0;
       <div class="col-sm-2 hidden-xs"></div>
       <?php $args = array(
         'post_type' => 'tea',
-        'posts_per_page' => 10
+        'posts_per_page' => 1
       );
       $loop = new WP_Query( $args ); $loop_count = 0;
       ?>

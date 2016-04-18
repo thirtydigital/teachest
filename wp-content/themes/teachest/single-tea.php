@@ -13,7 +13,7 @@
     <div class="container text-center">
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
-        <h1 class="display-3 text-uppercase">TEA: <?php the_title(); ?></h1>
+        <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
       </div>
       <div class="col-sm-1"></div>
     </div>
@@ -31,7 +31,9 @@
             <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
           </p>
           <p>
+            <?php if ( get_field('country_of_origin', get_the_ID()) ) { ?>
             Origin: <span class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></span><br />
+            <?php } ?>
             Temp: <?php echo get_field('recommended_temperature', get_the_ID()); ?><sup>&deg;</sup>C<br/>
             Steep: <?php echo get_field('recommended_steep_time', get_the_ID()); ?>
             <br />
