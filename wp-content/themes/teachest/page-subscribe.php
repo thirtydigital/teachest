@@ -41,7 +41,8 @@
       <?php
       $args = array(
         'post_type' => 'product',
-        'posts_per_page' => 5
+        'posts_per_page' => 5,
+        'order' => 'ASC'
       );
       $loop = new WP_Query( $args ); $loop_count = 0;
       ?>
