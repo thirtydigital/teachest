@@ -2,7 +2,9 @@
 'use strict'
 
 $(document).ready(function () {
-  $('.carousel').carousel()
+  if ($('.carousel')) {
+    $('.carousel').carousel()
+  }
 
   function scrollToId (idName) {
     $('html, body').animate({ scrollTop: $(idName).offset().top - 50 }, 1000)
@@ -40,6 +42,7 @@ $(document).ready(function () {
 
     $('input.productID').val(productID)
 
+    checkValidationSubs()
     e.preventDefault()
     return false
   })
@@ -52,6 +55,7 @@ $(document).ready(function () {
     $('.col-prices').removeClass('selected').find('.btn-tc-default').removeClass('selected').html('Select')
     $(this).html('Selected').addClass('selected').parent().addClass('selected')
 
+    checkValidationSubs()
     e.preventDefault()
     return false
   })
@@ -59,6 +63,7 @@ $(document).ready(function () {
   $('.btn-schedule-selector').on('click', function (e) {
     var productSchedule = $(this).data('schedule')
     $('input.productSchedule').val(productSchedule)
+    checkValidationSubs()
   })
 
   $('.btn-already-registered').on('click', function (e) {
@@ -70,4 +75,11 @@ $(document).ready(function () {
     e.preventDefault()
     return false
   })
+
+  function checkValidationSubs () {
+    var button = $('.btn-sub-progress')
+    if ($('input.productPrice').val() > 0 && $('input.productSchedule').val() > 0 && $('input.productID').val() > 0) {
+      button.prop('disabled', false)
+    }
+  }
 })

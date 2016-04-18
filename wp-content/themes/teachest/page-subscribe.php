@@ -160,7 +160,7 @@
               <input type="hidden" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
               <input type="hidden" class="productPrice" id="productPrice" name="productPrice" value="" />
               <input type="hidden" name="product-subscription" value="1" />
-              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer btn-sub-progress" name="register" disabled value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
             </form>
           </div>
         <?php } else { ?>
@@ -191,7 +191,7 @@
               <input type="hidden" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
               <input type="hidden" class="productPrice" id="productPrice" name="productPrice" value="" />
               <input type="hidden" name="product-subscription" value="1" />
-              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="login" value="<?php esc_attr_e( 'Sign In', 'woocommerce' ); ?>" />
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase btn-sub-progress" disabled name="login" value="<?php esc_attr_e( 'Sign In', 'woocommerce' ); ?>" />
             </div>
           </div>
           <?php do_action( 'woocommerce_login_form_end' ); ?>
@@ -223,7 +223,7 @@
               <input type="hidden" name="product-subscription" value="1" />
               <?php wp_nonce_field( 'woocommerce-register' ); ?>
               <?php wp_referer_field(); ?>
-              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer btn-sub-progress" disabled name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
             </div>
           </div>
     			<?php do_action( 'woocommerce_register_form_end' ); ?>

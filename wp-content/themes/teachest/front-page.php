@@ -124,7 +124,7 @@ $loop = new WP_Query( $args ); $loop_count = 0;
               <div class="col-sm-7 teabox-info">
                 <h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
                 <h4 class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></h4>
-                <p><?php echo substr(get_the_content(),0,200); ?>...</p>
+                <p><?php echo substr(get_the_content(),0,160); ?>...</p>
                 <p>
                   <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
                 </p>
