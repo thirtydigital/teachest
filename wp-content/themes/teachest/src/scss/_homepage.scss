@@ -127,8 +127,26 @@ body.home {
         }
       }
 
+      .carousel-control.left {
+        background: none!important;
+        opacity: 1;
+        left:-90px;
+      }
+      .carousel-control.right {
+        background: none!important;
+        opacity: 1;
+        right: -90px;
+      }
+
+      @media (max-width: $screen-xs-min) {
+        .carousel-control.left, .carousel-control.right {
+          display:none;
+        }
+      }
+
       .teabox-info {
-        padding: 1.25rem ;
+        padding: 1.25rem;
+        max-height: 150px;
       }
 
       h3 {

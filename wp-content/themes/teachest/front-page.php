@@ -106,30 +106,25 @@ $loop = new WP_Query( $args ); $loop_count = 0;
       <div class="col-sm-2 hidden-xs"></div>
       <?php $args = array(
         'post_type' => 'tea',
-        'posts_per_page' => 1
+        'posts_per_page' => 6
       );
       $loop = new WP_Query( $args ); $loop_count = 0;
       ?>
       <?php if ( $loop->have_posts() ) { ?>
-      <div class="col-sm-8 teabox" data-ride="carousel">
+      <div class="col-sm-8 teabox">
 
-        <div class="no-padding carousel slide">
-          <!-- <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol> -->
+        <div class="no-padding carousel slide" data-ride="carousel" id="tea-carousel">
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-            <div class="item active">
+            <div class="item <?php if ($loop_count===0) { ?>active<?php } ?>">
               <div class="col-sm-5 no-padding">
                 <?php the_post_thumbnail( array(325, 325), array( 'class' => 'img-responsive' ) ); ?>
               </div>
               <div class="col-sm-7 teabox-info">
                 <h3><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
                 <h4 class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></h4>
-                <p><?php echo get_the_content(); ?></p>
+                <p><?php echo substr(get_the_content(),0,200); ?>...</p>
                 <p>
                   <i class="fa fa-minus"></i><i style="position:relative;left:-2px;" class="fa fa-minus"></i>
                 </p>
@@ -142,14 +137,19 @@ $loop = new WP_Query( $args ); $loop_count = 0;
             </div>
             <?php $loop_count++; endwhile;  ?>
           </div>
-          <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <ol class="carousel-indicators">
+            <?php for ($x = 0; $x <= $loop_count; $x++) { ?>
+            <li data-target="#tea-carousel" data-slide-to="<?php echo $x; ?>" class="<?php if ($x===0) { ?>active<?php } ?>"></li>
+            <?php } ?>
+          </ol>
+          <a class="left carousel-control" href="#tea-carousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <a class="right carousel-control" href="#tea-carousel" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a> -->
+          </a>
         </div>
       </div>
       <?php } wp_reset_postdata(); ?>

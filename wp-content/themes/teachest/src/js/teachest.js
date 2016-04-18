@@ -2,6 +2,8 @@
 'use strict'
 
 $(document).ready(function () {
+  $('.carousel').carousel()
+
   function scrollToId (idName) {
     $('html, body').animate({ scrollTop: $(idName).offset().top - 50 }, 1000)
 
