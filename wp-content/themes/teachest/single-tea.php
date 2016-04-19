@@ -34,8 +34,12 @@
             <?php if ( get_field('country_of_origin', get_the_ID()) ) { ?>
             Origin: <span class="text-uppercase"><?php echo get_field('country_of_origin', get_the_ID()); ?></span><br />
             <?php } ?>
+            <?php if ( get_field('recommended_temperature', get_the_ID()) ) { ?>
             Temp: <?php echo get_field('recommended_temperature', get_the_ID()); ?><sup>&deg;</sup>C<br/>
+            <?php } ?>
+            <?php if ( get_field('recommended_steep_time', get_the_ID()) ) { ?>
             Steep: <?php echo get_field('recommended_steep_time', get_the_ID()); ?>
+            <?php } ?>
             <br />
           </p>
         </div>
