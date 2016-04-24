@@ -72,17 +72,29 @@ $(document).ready(function () {
 
   $('.btn-already-registered').on('click', function (e) {
     var hideClass = 'hidden'
-    $(this).parent().addClass(hideClass)
+    $('.section-already-registered').addClass(hideClass)
+    $('.section-not-registered').removeClass(hideClass)
     $('.form-horizontal.register').addClass(hideClass)
     $('.form-horizontal.login').removeClass(hideClass)
-
+    $('h2 .step-title').text('Sign In')
     e.preventDefault()
+
+    checkValidationSubs()
     return false
   })
 
-  // if ($('body.woocommerce-checkout input#place_order').length) {
-  //   $('body.woocommerce-checkout input#place_order').addClass('btn btn-tc-default btn-xl text-uppercase spacer')
-  // }
+  $('.btn-not-registered').on('click', function (e) {
+    var hideClass = 'hidden'
+    $('.section-not-registered').addClass(hideClass)
+    $('.section-already-registered').removeClass(hideClass)
+    $('.form-horizontal.register').removeClass(hideClass)
+    $('.form-horizontal.login').addClass(hideClass)
+    $('h2 .step-title').text('Sign Up')
+
+    checkValidationSubs()
+    e.preventDefault()
+    return false
+  })
 
   function checkValidationSubs () {
     var button = $('.btn-sub-progress')

@@ -54,7 +54,7 @@
   </div>
   <div class="row spacer">
     <div class="col-sm-12 text-center">
-      <h2 class="width-thin">Our TeaChest experts will do the rest</h2>
+      <h2 class="width-thinner">Our TeaChest experts will do the rest</h2>
       <p class="width-thin spacer-sm">
         We'll put together the best TeaChest possible for you from our vast range and create your own personal journey through the world of teas.
       </p>

@@ -77,14 +77,14 @@
         <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2-inverse.png" class="img-responsive" />
       </div>
       <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer col-prices">
-        <span class="price">&pound;3.95</span>
+        <span class="price">&pound;5.00</span>
         <div class="spacer-sm"><p>for 10 tea bags</p></div>
-        <button class="btn btn-tc-default btn-block spacer-sm btn-price-selector" data-price="3.95">Select</button>
+        <button class="btn btn-tc-default btn-block spacer-sm btn-price-selector" data-price="5.00">Select</button>
       </div>
       <div class="col-xs-6 col-sm-offset-0 col-sm-2 spacer col-prices">
-        <span class="price">&pound;5.00</span>
+        <span class="price">&pound;7.25</span>
         <div class="spacer-sm"><p>for 15 tea bags</p></div>
-        <button class="btn btn-tc-default btn-block spacer-sm btn-price-selector" data-price="5.00">Select</button>
+        <button class="btn btn-tc-default btn-block spacer-sm btn-price-selector" data-price="7.25">Select</button>
       </div>
       <div class="hidden-xs col-sm-3"></div>
     </div>
@@ -139,12 +139,15 @@
           You're logged in as: <?php echo $current_user->display_name; ?>. <br /><small>Not you? <a href="<?php echo wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ); ?>">Sign out</a></small>
         </p>
         <?php } else { ?>
-          <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> Sign Up</h2>
+          <h2 class="text-uppercase" id="step-three"><span class="step-number">3</span> <span class="step-title">Sign Up</span></h2>
           <p class="width-thin">
             Create an account from where you can manage your TeaChest subscription and payment methods.
           </p>
-          <p>
+          <p class="section-already-registered">
             <small>Already registered? <a href="#" class="btn-already-registered">Sign in</a></small>
+          </p>
+          <p class="section-not-registered hidden">
+            <small>Not registered? <a href="#" class="btn-not-registered">Sign Up</a></small>
           </p>
         <?php } ?>
       </div>

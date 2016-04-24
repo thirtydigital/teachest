@@ -42,6 +42,7 @@
             <?php } ?>
             <br />
           </p>
+          <a href="/subscribe/" class="btn btn-tc-default btn-xl text-uppercase spacer">Get started</a>
         </div>
       </div>
     </div>
