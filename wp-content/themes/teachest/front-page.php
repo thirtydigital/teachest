@@ -38,18 +38,18 @@
   <div class="row spacer">
     <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf.png" class="img-responsive" style="margin-bottom:50px" />
-      <h2><span class="step-number">1</span> Select type of tea</h2>
-      <p>Choose from our range of green, black, herbal, black blended teas or our Expert TeaChest.</p>
+      <h2 class="tc-push-right"><span class="step-number">1</span> Select type of tea</h2>
+      <p class="tc-push-right">Choose from our range of green, black, herbal, black blended teas or our Expert TeaChest.</p>
     </div>
     <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-leaf2.png" class="img-responsive" />
-      <h2><span class="step-number">2</span> Select quantity</h2>
-      <p>Choose from either 10 or 15  of the finest-quality teabags with each delivery.</p>
+      <h2 class="tc-push-right"><span class="step-number">2</span> Select quantity</h2>
+      <p class="tc-push-right">Choose from either 10 or 15  of the finest-quality teabags with each delivery.</p>
    </div>
    <div class="col-xs-12 col-sm-4 marketing-panel">
       <img src="/wp-content/themes/<?php echo get_template(); ?>/src/img/icon-delivery.png" class="img-responsive" />
-      <h2><span class="step-number">3</span> Select frequency</h2>
-      <p>Have a TeaChest delivered every week, fortnightly or four weeks as per your preference.</p>
+      <h2 class="tc-push-right"><span class="step-number">3</span> Select frequency</h2>
+      <p class="tc-push-right">Have a TeaChest delivered every week, fortnightly or four weeks as per your preference.</p>
     </div>
   </div>
   <div class="row spacer">
