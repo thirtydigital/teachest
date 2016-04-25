@@ -31,70 +31,71 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 ?>
 
-<div class="payment-step">
-  <form name="checkout" method="post" class="form-horizontal checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
+  <form name="checkout" method="post" class="form-horizontal checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<div class="payment-step">
   	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
   		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+      <div id="customer_details">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="text-uppercase text-center">Billing Details</h2>
+            <p class="text-center">
+              Complete your account and get started with your TeaChest journey. 
+            </p>
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+            <div class="col-md-8">
+              <?php do_action( 'woocommerce_checkout_billing' ); ?>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+          </div>
+        </div>
 
-      <div class="row">
-        <div class="col-sm-12">
-          <h2 class="text-uppercase text-center">Billing Details</h2>
-          <p class="text-center">
-            Complete your account and get started with your TeaChest journey. 
-          </p>
+        <div class="row">
+          <div class="hidden-xs col-sm-2"></div>
+          <div class="col-sm-8">
+            <hr class="dark" />
+          </div>
+          <div class="hidden-xs col-sm-2"></div>
+        </div>
+
+        <div class="row payment-different-address">
+          <div class="col-sm-12 text-center">
+            <h2 class="text-uppercase">Ship to a different address?</h2>
+          </div>
           <div class="hidden-xs hidden-sm col-md-2"></div>
-          <div class="col-md-8">
-            <?php do_action( 'woocommerce_checkout_billing' ); ?>
+          <div class="col-md-8 payment-different-address-panel">
+            <?php do_action( 'woocommerce_checkout_shipping' ); ?>
           </div>
           <div class="hidden-xs hidden-sm col-md-2"></div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="hidden-xs col-sm-2"></div>
-        <div class="col-sm-8">
-          <hr class="dark" />
+        <div class="row">
+          <div class="hidden-xs col-sm-2"></div>
+          <div class="col-sm-8">
+            <hr class="dark" />
+          </div>
+          <div class="hidden-xs col-sm-2"></div>
         </div>
-        <div class="hidden-xs col-sm-2"></div>
       </div>
-
-      <div class="row payment-different-address">
-        <div class="col-sm-12 text-center">
-          <h2 class="text-uppercase">Ship to a different address?</h2>
-        </div>
-        <div class="hidden-xs hidden-sm col-md-2"></div>
-        <div class="col-md-8 payment-different-address-panel">
-          <?php do_action( 'woocommerce_checkout_shipping' ); ?>
-        </div>
-        <div class="hidden-xs hidden-sm col-md-2"></div>
-      </div>
-
-      <div class="row">
-        <div class="hidden-xs col-sm-2"></div>
-        <div class="col-sm-8">
-          <hr class="dark" />
-        </div>
-        <div class="hidden-xs col-sm-2"></div>
-      </div>
-
   		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
   	<?php endif; ?>
 
-    <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
     <div class="row payment-your-order">
       <div class="col-sm-12 text-center">
-        <h2 class="text-uppercase">Your order</h2>
+        <h2 class="text-uppercase" id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h2>
       </div>
       <div class="hidden-xs hidden-sm col-md-2"></div>
-      <div class="col-md-8 text-center">
+      <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+      <div class="col-md-8 text-center woocommerce-checkout-review-order" id="order_review">
         <?php do_action( 'woocommerce_checkout_order_review' ); ?>
-      </div>
+      </di
+      <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>v>
       <div class="hidden-xs hidden-sm col-md-2"></div>
     </div>
-    <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+    </div>
+  </div>
   </form>
-</div>
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+  <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
