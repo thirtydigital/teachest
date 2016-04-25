@@ -28,3 +28,10 @@ hr.dark {
   margin-top:2.5rem;
   margin-bottom:2.5rem;
 }
+.tc-push-right {
+  margin-left:4.4rem;
+
+  @media (max-width: $screen-sm-min) {
+    margin-left: none;
+  }
+}

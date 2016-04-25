@@ -31,7 +31,24 @@ if ( ! defined( 'ABSPATH' ) ) {
     <h3 class="spacer"><?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;'; ?></h3>
     <p class="spacer">
       <?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?><br />
-      You will receive your first Tea Chest on xx/xx/2016
+      <?php
+        $order_time = '';
+        $current_day = date("d");
+
+        switch($current_day) {
+          case "01":
+          case "02":
+          case "03":
+          case "04":
+            $order_time = strtotime("next Thursday + 1 week");
+          break;
+
+          default:
+            $order_time = strtotime("next Thursday");
+          break;
+        }
+      ?>
+      <strong>You will receive your first Tea Chest on <?php echo date('d/m/Y', $order_time); ?></strong>
     </p>
 
     <?php
