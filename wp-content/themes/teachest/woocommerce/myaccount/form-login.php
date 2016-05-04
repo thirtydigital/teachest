@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="col-sm-12 text-center">
         <?php wp_nonce_field( 'woocommerce-login' ); ?>
         <?php wp_referer_field(); ?>
-        <button type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="register">Sign In</button>
+        <input type="submit" class="btn btn-tc-default btn-xl text-uppercase" name="login" value="<?php esc_attr_e( 'Sign In', 'woocommerce' ); ?>" />
       </div>
     </div>
     <?php do_action( 'woocommerce_login_form_end' ); ?>
