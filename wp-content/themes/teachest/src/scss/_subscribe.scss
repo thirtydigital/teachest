@@ -121,6 +121,7 @@ body.page-id-6 {
     }
     &.subscribe-step-signup {
       background: $color_default_light url(../img/leaf-background-2.png) no-repeat bottom left;
+      min-height:620px;
       @media (max-width: $screen-sm-min) {
         background-position: 30% 210%;
       }

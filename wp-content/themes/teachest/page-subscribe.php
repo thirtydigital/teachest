@@ -144,10 +144,7 @@
             Create an account from where you can manage your TeaChest subscription and payment methods.
           </p>
           <p class="section-already-registered">
-            <small>Already registered? <a href="#" class="btn-already-registered">Sign in</a></small>
-          </p>
-          <p class="section-not-registered hidden">
-            <small>Not registered? <a href="#" class="btn-not-registered">Sign Up</a></small>
+            <small>Already registered? <a href="/my-account/">Sign in</a></small>
           </p>
         <?php } ?>
       </div>
@@ -163,43 +160,11 @@
               <input type="hidden" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
               <input type="hidden" class="productPrice" id="productPrice" name="productPrice" value="" />
               <input type="hidden" name="product-subscription" value="1" />
-              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer btn-sub-progress" name="register" disabled value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer btn-sub-progress" name="register" value="<?php esc_attr_e( 'Subscribe', 'woocommerce' ); ?>" />
             </form>
           </div>
         <?php } else { ?>
         <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
-        <form method="post" class="login form-horizontal hidden">
-          <?php do_action( 'woocommerce_login_form_start' ); ?>
-          <div class="form-group">
-            <label class="col-sm-4 control-label text-uppercase"><?php _e( 'Email address', 'woocommerce' ); ?><sup>*</sup></label>
-            <div class="col-sm-8">
-              <input type="text" class="input-text form-control input-lg" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-4 control-label text-uppercase"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-            <div class="col-sm-8">
-              <input class="input-text form-control input-lg" type="password" name="password" id="password" />
-              <p class="lost_password">
-        				<small><a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'woocommerce' ); ?></a></small>
-        			</p>
-            </div>
-          </div>
-          <?php do_action( 'woocommerce_login_form' ); ?>
-          <div class="form-group">
-            <div class="col-sm-12 text-center">
-              <?php wp_nonce_field( 'woocommerce-login' ); ?>
-              <?php wp_referer_field(); ?>
-              <input type="hidden" class="productID" id="productID" name="productID" value="" />
-              <input type="hidden" class="productSchedule" id="productSchedule" name="productSchedule" value="" />
-              <input type="hidden" class="productPrice" id="productPrice" name="productPrice" value="" />
-              <input type="hidden" name="product-subscription" value="1" />
-              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase btn-sub-progress" disabled name="login" value="<?php esc_attr_e( 'Sign In', 'woocommerce' ); ?>" />
-            </div>
-          </div>
-          <?php do_action( 'woocommerce_login_form_end' ); ?>
-        </form>
-
     		<form method="post" class="register form-horizontal">
     			<?php do_action( 'woocommerce_register_form_start' ); ?>
           <div class="form-group">
@@ -226,7 +191,7 @@
               <input type="hidden" name="product-subscription" value="1" />
               <?php wp_nonce_field( 'woocommerce-register' ); ?>
               <?php wp_referer_field(); ?>
-              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer btn-sub-progress" disabled name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
+              <input type="submit" class="btn btn-tc-default btn-xl text-uppercase spacer btn-sub-progress" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>" />
             </div>
           </div>
     			<?php do_action( 'woocommerce_register_form_end' ); ?>

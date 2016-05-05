@@ -4,6 +4,13 @@
 $(document).ready(function () {
   if ($('.carousel')) {
     $('.carousel').carousel()
+
+    $('.carousel').swiperight(function () {
+      $(this).carousel('prev')
+    })
+    $('.carousel').swipeleft(function () {
+      $(this).carousel('next')
+    })
   }
 
   if ($('.subscribe-step').length > 0) {
@@ -32,11 +39,6 @@ $(document).ready(function () {
     return false
   })
 
-  // $('.payment-different-address input').change(function () {
-  //   $(this).parent().parent().parent().remove()
-  //   $('.payment-different-address-panel').toggleClass('hidden')
-  // })
-
   $('.col-product .btn-tc-default').on('click', function (e) {
     var productID = $(this).data('id')
 
@@ -46,7 +48,6 @@ $(document).ready(function () {
 
     $('input.productID').val(productID)
 
-    checkValidationSubs()
     e.preventDefault()
     return false
   })
@@ -59,7 +60,6 @@ $(document).ready(function () {
     $('.col-prices').removeClass('selected').find('.btn-tc-default').removeClass('selected').html('Select')
     $(this).html('Selected').addClass('selected').parent().addClass('selected')
 
-    checkValidationSubs()
     e.preventDefault()
     return false
   })
@@ -67,39 +67,22 @@ $(document).ready(function () {
   $('.btn-schedule-selector').on('click', function (e) {
     var productSchedule = $(this).data('schedule')
     $('input.productSchedule').val(productSchedule)
-    checkValidationSubs()
   })
 
-  $('.btn-already-registered').on('click', function (e) {
-    var hideClass = 'hidden'
-    $('.section-already-registered').addClass(hideClass)
-    $('.section-not-registered').removeClass(hideClass)
-    $('.form-horizontal.register').addClass(hideClass)
-    $('.form-horizontal.login').removeClass(hideClass)
-    $('h2 .step-title').text('Sign In')
-    e.preventDefault()
-
-    checkValidationSubs()
-    return false
-  })
-
-  $('.btn-not-registered').on('click', function (e) {
-    var hideClass = 'hidden'
-    $('.section-not-registered').addClass(hideClass)
-    $('.section-already-registered').removeClass(hideClass)
-    $('.form-horizontal.register').removeClass(hideClass)
-    $('.form-horizontal.login').addClass(hideClass)
-    $('h2 .step-title').text('Sign Up')
-
-    checkValidationSubs()
-    e.preventDefault()
-    return false
+  $('.btn-sub-progress').on('click', function (e) {
+    if (!checkValidationSubs()) {
+      $('.woocommerce-error').remove()
+      $('.woocommerce').append('<div class="woocommerce-error">You must choose a Tea, Quantity and a Frequency</div>')
+      e.preventDefault()
+      return false
+    }
   })
 
   function checkValidationSubs () {
-    var button = $('.btn-sub-progress')
     if ($('input.productPrice').val() > 0 && $('input.productSchedule').val() > 0 && $('input.productID').val() > 0) {
-      button.prop('disabled', false)
+      return true
+    } else {
+      return false
     }
   }
 })

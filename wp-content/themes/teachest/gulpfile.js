@@ -14,6 +14,7 @@ var paths = {
   scripts: [
     './src/vendor/jquery/jquery-2.2.1.js',
     './src/vendor/bootstrap/javascripts/bootstrap.js',
+    './src/vendor/jquery/jquery.ui.swipe.js',
     './src/js/teachest.js'
   ]
 }
