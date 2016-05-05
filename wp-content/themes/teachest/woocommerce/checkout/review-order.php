@@ -33,13 +33,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       <?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?><br />
       <?php
         $order_time = '';
-        $current_day = date("d");
-
+        $current_day = date("D");
         switch($current_day) {
-          case "01":
-          case "02":
-          case "03":
-          case "04":
+          case "Mon":
+          case "Tue":
+          case "Wed":
             $order_time = strtotime("next Thursday + 1 week");
           break;
 
