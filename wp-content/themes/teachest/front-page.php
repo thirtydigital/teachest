@@ -138,7 +138,7 @@ $loop = new WP_Query( $args ); $loop_count = 0;
             <?php $loop_count++; endwhile;  ?>
           </div>
           <ol class="carousel-indicators">
-            <?php for ($x = 0; $x <= $loop_count; $x++) { ?>
+            <?php for ($x = 0; $x < $loop_count; $x++) { ?>
             <li data-target="#tea-carousel" data-slide-to="<?php echo $x; ?>" class="<?php if ($x===0) { ?>active<?php } ?>"></li>
             <?php } ?>
           </ol>

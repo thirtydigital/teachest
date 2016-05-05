@@ -63,6 +63,10 @@
 
 #billing_country_field, #shipping_country_field { display: none!important }
 
-.wc-terms-and-conditions {
-  margin-bottom: 20px; 
+p.wc-terms-and-conditions {
+  margin-bottom: 40px;
+}
+
+table.table {
+  font-size: 1.2rem
 }
