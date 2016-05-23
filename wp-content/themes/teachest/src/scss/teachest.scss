@@ -70,3 +70,12 @@ p.wc-terms-and-conditions {
 table.table {
   font-size: 1.2rem
 }
+
+div.btn-tc-default a.btn.btn-default {
+  display: block;
+  background: none;
+  font-size: inherit;
+  border: none;
+  padding: 0px;
+  line-height: inherit;
+}
