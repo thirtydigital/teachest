@@ -78,4 +78,7 @@ div.btn-tc-default a.btn.btn-default {
   border: none;
   padding: 0px;
   line-height: inherit;
+  &:active, &:focus {
+    box-shadow: none;
+  }
 }
