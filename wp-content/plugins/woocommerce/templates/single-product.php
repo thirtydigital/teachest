@@ -20,9 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
-
-	<?php
+get_header(); ?>
+<?php
 		/**
 		 * woocommerce_before_main_content hook.
 		 *
@@ -31,14 +30,25 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
-
-		<?php endwhile; // end of the loop. ?>
-
-	<?php
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <h1 class="display-3 text-uppercase"><?php the_title(); ?></h1>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+  <div class="container-fluid generic-content">
+    <div class="container">
+      <div class="row">
+				<?php wc_get_template_part( 'content', 'single-product' ); ?>
+      </div>
+    </div>
+  </div>
+<?php endwhile; ?><?php endif; ?>
+<?php
 		/**
 		 * woocommerce_after_main_content hook.
 		 *
@@ -46,14 +56,4 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
-
-<?php get_footer( 'shop' ); ?>
+<?php get_footer(); ?>
