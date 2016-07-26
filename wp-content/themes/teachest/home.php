@@ -24,18 +24,29 @@
 <div class="container-fluid generic-content">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 text-center">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <div class="text-center">
-            <?php the_post_thumbnail( array(300, 300) ); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php if ( has_post_thumbnail() ) { ?>
+          <div class='col-lg-4 col-sm-6 col-xs-12 text-center' style='margin-bottom:20px'>
+            <?php the_post_thumbnail( 'medium' ); ?>
           </div>
-          <h2 class="text-center text-uppercase"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2><br/>
+          <div class='col-lg-8 col-sm-6 col-xs-12'>
+            <h2 class="text-uppercase" style='margin-top:0'><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2><br/>
+            <?php the_excerpt(); ?><br/>
+            <a href="<?php the_permalink(); ?>" class="btn btn-tc-default btn-lg">Read more</a>
+          </div>
+          <div class='col-sm-12'>
+            <hr class="dark" />
+          </div>
+        <?php } else { ?>
+        <div class="col-sm-12">
+          <h2 class="text-uppercase"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2><br/>
           <?php the_excerpt(); ?><br/>
-          <a href="<?php the_permalink(); ?>" class="text-center btn btn-tc-default btn-lg">Read more</a>
+          <a href="<?php the_permalink(); ?>" class="btn btn-tc-default btn-lg">Read more</a>
           <hr class="dark" />
-        <?php endwhile; else : ?>
-        <?php endif; ?>
-      </div>
+        </div>
+        <?php } ?>
+      <?php endwhile; else : ?>
+      <?php endif; ?>
     </div>
   </div>
 </div>

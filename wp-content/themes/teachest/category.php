@@ -13,7 +13,7 @@ get_header(); ?>
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <h1 class="display-3 text-uppercase"><?php echo single_cat_title(); ?></h1>
-      <nav class="tea-categories">
+      <nav class="tea-categories text-uppercase">
         <?php wp_nav_menu( array( 'theme_location' => 'our-range-categories', 'container' => false, 'menu_class' => 'list-inline') ); ?>
       </nav>
     </div>

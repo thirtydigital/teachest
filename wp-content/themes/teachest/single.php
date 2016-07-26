@@ -22,6 +22,10 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
+        <?php 
+        if ( has_post_thumbnail() ) { ?>
+            <div class='featured-image'><?php the_post_thumbnail(); ?></div>
+        <?php } ?>
         <?php the_content(); ?>
       </div>
     </div>
